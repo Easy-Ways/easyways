@@ -90,43 +90,20 @@
                             <li>
                                 <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                    <li>
-                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"> <span class="mini-click-non"><u>Math</u></span></a>
-                                        <ul class="submenu-angle" aria-expanded="false">
-                                            <li><a title="Math | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
-                                            <li><a title="Math | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
-                                            <li><a title="Math | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
-                                            <li><a title="Math | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="mini-click-non"><u>Physique</u></span></a>
-                                        <ul class="submenu-angle" aria-expanded="false">
-                                            <li><a title="Physique | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
-                                            <li><a title="Physique | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
-                                            <li><a title="Physique | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
-                                            <li><a title="Physique | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="mini-click-non"><u>Science</u></span></a>
-                                        <ul class="submenu-angle" aria-expanded="false">
-                                            <li><a title="Science | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
-                                            <li><a title="Science | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
-                                            <li><a title="Science | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
-                                            <li><a title="Science | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"> <span class="mini-click-non"><u>Info</u></span></a>
-                                        <ul class="submenu-angle" aria-expanded="false">
-                                            <li><a title="Math | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
-                                            <li><a title="Math | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
-                                            <li><a title="Math | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
-                                            <li><a title="Math | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                
+                                    <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
+                                <li>
+                                    <a class="has-arrow" href="#" aria-expanded="false"> <span class="mini-sub-pro"><u><%=studentuser.subscription[i]%></u></span></a>
+                                    <ul class="submenu-angle" aria-expanded="false">
+                                        <li><a title="Math | Courses" href="/Courses?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Courses</span></a></li>
+                                        <li><a title="Math | Methodes" href="/Methods"><span class="mini-sub-pro">Methodes</span></a></li>
+                                        <li><a title="Math | Exercices" href="/Exercices"><span class="mini-sub-pro">Exercices</span></a></li>
+                                        <li><a title="Math | Devoirs" href="/Devoirs"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                    </ul>
+                                </li>
+                                <% } %>
+                                
+                            </ul>
                             </li>
                             <li>
                                 <a href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Chat</span></a>

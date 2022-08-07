@@ -59,6 +59,12 @@
         <!-- responsive CSS
             ============================================ -->
         <link rel="stylesheet" href="css/responsive.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <!-- modernizr JS
             ============================================ -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -72,14 +78,14 @@
         <div class="left-sidebar-pro">
             <nav id="sidebar" class="">
                 <div class="sidebar-header">
-                    <a href="/home"><img class="main-logo" src="img/logo/logoo.png" alt="" /></a>
-                    <strong><a href="/home"><img src="img/logo/Easy-Ways.png" alt="" /></a></strong>
+                    <a href="home.html"><img class="main-logo" src="img/logo/logoo.png" alt="" /></a>
+                    <strong><a href="home.html"><img src="img/logo/Easy-Ways.png" alt="" /></a></strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap comment-scrollbar">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
                         <ul class="metismenu" id="menu1">
                             <li class="active">
-                                <a href="/home">
+                                <a href="home.html">
                                        <span class="educate-icon educate-home icon-wrap"></span>
                                        <span class="mini-click-non">Home</span>
                                     </a>
@@ -90,20 +96,43 @@
                             <li>
                                 <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                
-                                    <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
-                                <li>
-                                    <a class="has-arrow" href="#" aria-expanded="false"> <span class="mini-sub-pro"><u><%=studentuser.subscription[i]%></u></span></a>
-                                    <ul class="submenu-angle" aria-expanded="false">
-                                        <li><a title="Math | Courses" href="/Courses?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Courses</span></a></li>
-                                        <li><a title="Math | Methodes" href="/Methods"><span class="mini-sub-pro">Methodes</span></a></li>
-                                        <li><a title="Math | Exercices" href="/Exercices"><span class="mini-sub-pro">Exercices</span></a></li>
-                                        <li><a title="Math | Devoirs" href="/Devoirs"><span class="mini-sub-pro">Devoirs</span></a></li>
-                                    </ul>
-                                </li>
-                                <% } %>
-                                
-                            </ul>
+                                    <li>
+                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"> <span class="mini-click-non"><u>Math</u></span></a>
+                                        <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Math | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
+                                            <li><a title="Math | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
+                                            <li><a title="Math | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
+                                            <li><a title="Math | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="mini-click-non"><u>Physique</u></span></a>
+                                        <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Physique | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
+                                            <li><a title="Physique | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
+                                            <li><a title="Physique | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
+                                            <li><a title="Physique | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="mini-click-non"><u>Science</u></span></a>
+                                        <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Science | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
+                                            <li><a title="Science | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
+                                            <li><a title="Science | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
+                                            <li><a title="Science | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"> <span class="mini-click-non"><u>Info</u></span></a>
+                                        <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Math | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
+                                            <li><a title="Math | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
+                                            <li><a title="Math | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
+                                            <li><a title="Math | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Chat</span></a>
@@ -935,82 +964,59 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="blog-details-inner">
                             <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="latest-blog-single blog-single-full-view">
-                                        <div class="blog-image">
-                                            <a href="#"><img src="img/blog-details/1.jpg" alt="" />
-												</a>
-                                            <div class="blog-date">
-                                                <p><span class="blog-day">Good</span> Luck</p>
-                                            </div>
-                                        </div>
-                                        <div class="blog-details blog-sig-details">
-                                            <%resumeuser.forEach(res => {%>
-                                            <div class="details-blog-dt blog-sig-details-dt courses-info mobile-sm-d-n">
-                                                <span><a href="#"><i class="fa fa-user"></i> <b>Course Name: </b><%=res.name%></a></span>
-                                                <span><a href="#"><i class="fa fa-heart"></i> <b>Course Duration: </b> <%=res.hours%>h</a></span>
-                                                <span><a href="#"><i class="fa fa-comments-o"></i> <b>Professor Name: </b> <%=res.teacher%></a></span>
-                                            </div>
-                                            <%})%>
-                                            <h1><a class="blog-ht" style="color:red ;" href="#">Notion de continuité</a></h1>
-                                            <p>Graphiquement, on peut reconnaître une fonction continue sur un intervalle I par le fait que le tracé de la 
-                                                courbe représentative de f pour x Œ I peut se faire sans lever le crayon de la feuille.</p>
-                                            <p>Les fonctions polynômes, les fonctions rationnelles, la fonction racine carrée sont continues sur tout 
-                                                intervalle sur le quel sont définies. </p>
-                                            <p><h4 style="color: rgb(6, 129, 185);">Règles opératoires</a></h4>
-                                                La limite en +oo ou en -oo d’une fonction polynôme est égale à la limite de son terme de plus haut degré.<br> 
-                                                La limite en +oo ou en -oo d’une fonction rationnelle est égale à la limite du quotient de ses termes de plus 
-                                                haut degré.</p><hr> 
-                                                <h1><a class="blog-ht" style="color:red;" href="#">Continuité et limite d’une fonction composée</a></h1>
-                                                <p><h4 style="color: rgb(6, 129, 185);">Définition</a></h4>
-                                                    Soit f une fonction définie sur un ensemble I et g une fonction définie sur ensemble J tel que f(I) C J . 
-                                                    La fonction notée gof , définie sur I par g o f(x) = g [ f(x)], est appelée fonction composée de f et g.</p>
-                                                <p>Les fonctions polynômes, les fonctions rationnelles, la fonction racine carrée sont continues sur tout 
-                                                    intervalle sur le quel sont définies. </p><hr>    
-                                                <h1><a class="blog-ht" style="color:red;" href="#">Limites et ordre</a></h1>
-                                                <div class="blog-image">
-                                                    <center>
-                                                        <img src="img/courses/comparaison.png" alt="" />
-                                                    </center>   
+                                <div class="latest-blog-single blog-single-full-view">
+                                    <div class="single-pro-review-area mt-t-30 mg-b-15">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="product-payment-inner-st">
+                                                        <ul id="myTabedu1" class="tab-review-design">
+                                                            <li class="active"><a href="#description">Schedule Details</a></li>
+                                                        </ul>
+                                                        <div id="myTabContent" class="tab-content custom-product-edit">
+                                                            <div class="product-tab-list tab-pane fade active in" id="description">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="review-content-section">
+                                                                            <div id="dropzone1" class="pro-ad addcoursepro">
+                                                                                <form action="/upload" class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload">
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                            <div class="form-group">
+                                                                                                <input name="finish" id="finish" type="text" class="form-control" placeholder="First">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <input name="duration" type="text" class="form-control" placeholder="Second">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                                            <div class="form-group res-mg-t-15">
+                                                                                                <input name="department" type="text" class="form-control" placeholder="Third">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <input name="crprofessor" type="text" class="form-control" placeholder="Fourth">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-12">
+                                                                                            <div class="payment-adress">
+                                                                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <hr>
-                                                <h1><a class="blog-ht" style="color:red;" href="#">Image d’un intervalle par une fonction continue</a></h1>
-                                                <p><h4 style="color: rgb(6, 129, 185);">Théorème des valeurs intermédiaires</a></h4>
-                                                    Soit f une fonction définie et continue 
-                                                    sur un intervalle I.
-                                                    Soient a Œ I  et b Œ I. 
-                                                    Pour tout réel k compris entre f(a) et f(b) , 
-                                                    il existe au moins un réel c compris entre a et b 
-                                                    tel que f(c) = k
-                                                </p>
-                                                <center>
-                                                    <video width="500" height="400" controls>
-                                                        <source src="" type="video/mp4">
-                                                    </video>  
-                                                </center>
-                                                <hr>
-                                                <h1>Let's Recap!</a></h1>
-                                                <div>
-                                                    <ol>
-                                                        <li>Comment calculer les limites graphiquement et analytiquement.</li>
-                                                        <li>Continuité d'une fonction dans un untervalle et en un point.</li>
-                                                        <li>Image d'un intervalle et theorème des valeurs intermédiares.</li>
-                                                    </ol>
-                                                </div>
-                                                <hr>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="coment-area">
-                                    <form id="comment" action="/Progress" class="comment" method="POST">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="payment-adress comment-stn">
-                                                <button type="submit" class="btn btn-primary waves-effect waves-light">I Finish This Chapter</button>
-                                            </div>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -1083,6 +1089,7 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
