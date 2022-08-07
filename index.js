@@ -22,6 +22,9 @@ const courlock = require('./routers/courlock');
 const cour_progress = require('./routers/cour_progress');
 const activate = require('./routers/activate');
 const schedule = require('./routers/schedule');
+const fpass = require('./routers/fpass');
+const reset = require('./routers/reset');
+
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -64,7 +67,9 @@ app.use('/', section)
 app.use('/subscription',subscription);
 app.use('/login',signin);
 app.use('/activate-acc',activate);
-//dashboard
+app.use('/forgetpass',fpass);
+app.use('/reset-pass',reset);
+//student-dashboard
 app.use('/home',home);
 app.use('/search', search);
 app.use('/Profile',profile);
