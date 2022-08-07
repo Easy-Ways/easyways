@@ -59,29 +59,19 @@ app.use('/pricing',pricing);
 app.use('/guide',guide);
 app.use('/contact',contact);
 app.use('/about-us',aboutus);
-
+app.use('/register', signup).listen(4000);
+app.use('/', section)
+app.use('/subscription',subscription);
+app.use('/login',signin);
+app.use('/activate-acc',activate);
 //dashboard
 app.use('/home',home);
 app.use('/search', search);
 app.use('/Profile',profile);
 app.use('/Courses', course);
-//sign-up
-app.use('/register', signup).listen(4000);
-//section
-app.use('/', section)
-//subscription
-app.use('/subscription',subscription);
-//sign-in
-app.use('/login',signin);
-//Resume
 app.use('/OurCour',courlock);
-//Cour Progress
 app.use('/Progress', cour_progress);
-//acc-activator
-app.use('/activate-acc',activate);
-//schedule
 app.use('/Schedule',schedule);
- //course uploader
- app.use('/uploader',uploader);
+app.use('/uploader',uploader);
 
  
