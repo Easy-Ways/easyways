@@ -979,13 +979,13 @@
                                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                         <div class="review-content-section">
                                                                             <div id="dropzone1" class="pro-ad addcoursepro">
-                                                                                <form action="/upload" class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload">
+                                                                                <form action="/sch-up" class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload" method="POST">
                                                                                     <div class="row">
                                                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                                             <div class="form-group">
                                                                                                 <label >Section :</label>
                                                                                                 <br>
-                                                                                                <select name="school" >
+                                                                                                <select name="section" >
                                                                                                     <option value="Bac-sc" >Bac Sciences</option>
                                                                                                     <option value="Bac-Math">Bac Math</option>
                                                                                                     <option value="Bac-tech">Bac Technique</option>
@@ -999,7 +999,7 @@
                                                                                             <div class="form-group">
                                                                                                 <label >Class :</label>
                                                                                                     <br>
-                                                                                                    <select name="school" >
+                                                                                                    <select name="class" >
                                                                                                         <option value="1">1</option>
                                                                                                         <option value="2">2</option>
                                                                                                         <option value="3">3</option>
@@ -1012,28 +1012,28 @@
                                                                                                 <label >Day :</label>
                                                                                                 <br>
                                                                                                 <select name="day" >
-                                                                                                    <option value="Monday" >Monday</option>
-                                                                                                    <option value="Tuesday">Tuesday</option>
-                                                                                                    <option value="Thursday">Thursday</option>
-                                                                                                    <option value="Wednsday">Wednsday</option>
-                                                                                                    <option value="Friday">Friday</option>
-                                                                                                    <option value="Saturday">Saturday</option>
-                                                                                                    <option value="Sunday">Sunday</option>
+                                                                                                    <option value="0" >Monday</option>
+                                                                                                    <option value="1">Tuesday</option>
+                                                                                                    <option value="2">Thursday</option>
+                                                                                                    <option value="3">Wednsday</option>
+                                                                                                    <option value="4">Friday</option>
+                                                                                                    <option value="5">Saturday</option>
+                                                                                                    <option value="6">Sunday</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                                             <div class="form-group res-mg-t-15">
-                                                                                                <input name="department" type="text" class="form-control" placeholder="First">
+                                                                                                <input name="m1" type="text" class="form-control" placeholder="First">
                                                                                             </div>
                                                                                             <div class="form-group res-mg-t-15">
-                                                                                                <input name="department" type="text" class="form-control" placeholder="Second">
+                                                                                                <input name="m2" type="text" class="form-control" placeholder="Second">
                                                                                             </div>
                                                                                             <div class="form-group res-mg-t-15">
-                                                                                                <input name="department" type="text" class="form-control" placeholder="Third">
+                                                                                                <input name="m3" type="text" class="form-control" placeholder="Third">
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <input name="crprofessor" type="text" class="form-control" placeholder="Fourth">
+                                                                                                <input name="m4" type="text" class="form-control" placeholder="Fourth">
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>

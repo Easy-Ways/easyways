@@ -24,15 +24,21 @@ const activate = require('./routers/activate');
 const schedule = require('./routers/schedule');
 const fpass = require('./routers/fpass');
 const reset = require('./routers/reset');
-
+const sch_up = require('./routers/sch-up');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 //dont fucking touch me //dont fucking touch me //dont fucking touch me 
+app.set('views',[__dirname ,__dirname + '/student',__dirname + '/admin-area']);
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 app.use(express.static(__dirname));                 //dont fucking touch me 
 app.use(express.static(__dirname+ '/student'));      //dont fucking touch me 
 app.use(express.static(__dirname+'./student/css'));  //dont fucking touch me 
-app.use(express.static(__dirname+'./assets/css/'));     //dont fucking touch me 
+app.use(express.static(__dirname+'./assets/css/'));   
+app.use('/admin',express.static(__dirname+ '/admin-area'));
+app.use('/admin',express.static(__dirname+'./admin-area/css/'));
+//dont fucking touch me 
 //dont fucking touch me //dont fucking touch me //dont fucking touch me 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -53,9 +59,7 @@ mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/
 //getting data
 app.use(bodyparser.json());
 //html render
-app.set('views',[__dirname ,__dirname + '/student']);
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
+
 //landboard views
 app.use('/events',events);
 app.use('/pricing',pricing);
@@ -78,5 +82,6 @@ app.use('/OurCour',courlock);
 app.use('/Progress', cour_progress);
 app.use('/Schedule',schedule);
 app.use('/uploader',uploader);
-
+//admin-dashboard
+app.use('/sch-up',sch_up);
  
