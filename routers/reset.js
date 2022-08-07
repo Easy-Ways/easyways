@@ -1,3 +1,4 @@
+const express = require('express');
 const router = express.Router();
 const reset = require('../controllers/resetctrl');
 router.get('/',reset.rendere);
