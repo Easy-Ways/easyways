@@ -15,9 +15,10 @@ exports.rendere = (req,res) =>{
 
 }
 exports.save = (req,res) =>{
+    console.log(req.body.password);
     bcrypt.hash(req.body.password,10)
      .then((hash)=>{
-    user.findOne({_id:id}).then((User)=>{
+    user.findOne({ _id:id }).then((User)=>{
         User.save()
         .then(()=>{
             res.redirect('/login');
