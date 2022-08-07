@@ -68,7 +68,7 @@ app.use('/subscription',subscription);
 app.use('/login',signin);
 app.use('/activate-acc',activate);
 app.use('/forgetpass',fpass);
-app.use('/reset-pass',reset);
+app.use('/resetpass',reset);
 //student-dashboard
 app.use('/home',home);
 app.use('/search', search);

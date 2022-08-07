@@ -30,11 +30,11 @@ exports.save = (req,res) =>{
 
             });
             var htmlstream =fs.readFile("forgettmp.html", 'utf8', function (err, data) {
-              var link = "http://localhost:4000/resetpass-?id=" + id;
+              var link = "http://localhost:4000/resetpass?id=" + id;
               data = data.replace(/{{link}}/,link);
              let info = ({
               from: ' academy.easyways@gmail.com', // sender address
-              to: obb.email, // list of receivers
+              to: User.email, // list of receivers
               subject: "Hello ✔ Reset your password", // Subject line
               text: "", // plain text body
               html: data, // plain text body
