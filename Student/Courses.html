@@ -90,6 +90,7 @@
                             <li>
                                 <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
+<<<<<<< HEAD
                                     
                                     <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
                                         <li>
@@ -103,6 +104,21 @@
                                         </li>
                                         <% } %>
                                     
+=======
+                                
+                                    <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
+                                <li>
+                                    <a class="has-arrow" href="#" aria-expanded="false"> <span class="mini-sub-pro"><u><%=studentuser.subscription[i]%></u></span></a>
+                                    <ul class="submenu-angle" aria-expanded="false">
+                                        <li><a title="Math | Courses" href="/Courses?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Courses</span></a></li>
+                                        <li><a title="Math | Methodes" href="/Methods"><span class="mini-sub-pro">Methodes</span></a></li>
+                                        <li><a title="Math | Exercices" href="/Exercices"><span class="mini-sub-pro">Exercices</span></a></li>
+                                        <li><a title="Math | Devoirs" href="/Devoirs"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                    </ul>
+                                </li>
+                                <% } %>
+                                
+>>>>>>> 6131839bac855c7793aed94347837bc9ef6b0e75
                                 </ul>
                             </li>
                             <li>
