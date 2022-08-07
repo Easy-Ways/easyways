@@ -56,6 +56,44 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px;
   font-weight:700;
 }
+.preloader {
+    z-index: 99999;
+    position: absolute;
+    background-color: #ffbcd1;
+    opacity: 1;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+  }
+  .preloadertext {
+    color: #ffffff;
+    padding-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  .preloaderdiv {
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b;
+    border-top-color: #5a0053;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 a {transition: all 0.3s ease 0s;text-decoration:none;}
 a:hover{
   color: #ec4445;

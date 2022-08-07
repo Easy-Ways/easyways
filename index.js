@@ -1,0 +1,87 @@
+//packages
+const express = require('express');
+const app = express();
+const bodyparser = require('body-parser');
+const mongoose = require('mongoose');
+const search = require('./routers/search');
+const signup = require('./routers/singup');
+const section = require('./routers/section')
+const signin = require('./routers/signin');
+const home = require('./routers/home');
+const uploader = require('./routers/upload');
+const events = require('./routers/events');
+const pricing = require('./routers/pricing');
+const guide = require('./routers/guide');
+const contact = require('./routers/contact');
+const aboutus = require('./routers/about-us');
+const subscription = require('./routers/subscription');
+const profile = require('./routers/profile');
+const cookieParser = require('cookie-parser')
+const course = require('./routers/course');
+const courlock = require('./routers/courlock');
+const cour_progress = require('./routers/cour_progress');
+const activate = require('./routers/activate');
+const schedule = require('./routers/schedule');
+//prereq
+app.use(express.json());
+app.use(express.urlencoded({extended : true}));
+//dont fucking touch me //dont fucking touch me //dont fucking touch me 
+app.use(express.static(__dirname));                 //dont fucking touch me 
+app.use(express.static(__dirname+ '/student'));      //dont fucking touch me 
+app.use(express.static(__dirname+'./student/css'));  //dont fucking touch me 
+app.use(express.static(__dirname+'./assets/css/'));     //dont fucking touch me 
+//dont fucking touch me //dont fucking touch me //dont fucking touch me 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    next();
+  });
+//mongoconnect
+mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority')
+  .then(()=>{
+    console.log("DB Connected");
+  })
+  .catch((error)=>{
+    console.error(error);
+  })
+  //cookies
+  app.use(cookieParser())
+//getting data
+app.use(bodyparser.json());
+//html render
+app.set('views',[__dirname ,__dirname + '/student']);
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+//landboard views
+app.use('/events',events);
+app.use('/pricing',pricing);
+app.use('/guide',guide);
+app.use('/contact',contact);
+app.use('/about-us',aboutus);
+
+//dashboard
+app.use('/home',home);
+app.use('/search', search);
+app.use('/Profile',profile);
+app.use('/Courses', course);
+//sign-up
+app.use('/register', signup).listen(4000);
+//section
+app.use('/', section)
+//subscription
+app.use('/subscription',subscription);
+//sign-in
+app.use('/login',signin);
+//Resume
+app.use('/OurCour',courlock);
+//Cour Progress
+app.use('/Progress', cour_progress);
+//acc-activator
+app.use('/activate-acc',activate);
+//schedule
+app.use('/Schedule',schedule);
+ //course uploader
+ app.use('/uploader',uploader);
+
+ 

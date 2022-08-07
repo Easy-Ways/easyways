@@ -42,15 +42,16 @@
 
     
         <!-- Login Admin -->
-        <form class="form-default" action="login-bg.mp4" method="POST">
+        <form class="form-default" action="/login" method="POST">
             
             <div class="login-form">
                 <!-- logo-login -->
                 <div class="logo-login">
-                    <a href="index.html"><img src="assets/img/logo/Easy-Ways.png" alt=""></a>
+                    <a href="/"><img src="assets/img/logo/Easy-Ways.png" alt=""></a>
                 </div>
                 <h2>Sign-In Here</h2>
                 <div class="form-input">
+                    <h3 style="color:red;"><strong><%=message%></strong></h3>
                     <label for="name"><strong>Email</label>
                     <input  type="email" name="email" placeholder="Enter your mail" required>
                 </div>
@@ -63,9 +64,9 @@
                 </div>
                 
                 <!-- Forget Password -->
-                <a href="forgetpass.html" class="forget">Forget Password</a>
+                <a href="/forgetpass" class="forget">Forget Password</a>
                 <!-- Forget Password -->
-                <a href="register.html" class="registration">Registration</a>
+                <a href="/register" class="registration">Registration</a>
             </div>
         </form>
         <!-- /end login form -->

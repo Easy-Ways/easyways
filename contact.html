@@ -43,7 +43,7 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="/"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10">
@@ -52,13 +52,13 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">                                                                                          
-                                        <li class="active" ><a href="index.html">Home</a></li>
-                                        <li><a href="Events.html">Events</a></li>
-                                        <li><a href="Pricing.html">Pricing</a></li>
-                                        <li><a href="Guide.html">Guide</a></li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li class="active" ><a href="/">Home</a></li>
+                                        <li><a href="/events">Events</a></li>
+                                        <li><a href="/pricing">Pricing</a></li>
+                                        <li><a href="/guide">Guide</a></li>
+                                        <li><a href="/contact">Contact us</a></li>
                                         <!-- Button -->
-                                        <li class="button-header margin-left "><a href="login.html" class="btn">Join</a></li>
+                                        <li class="button-header margin-left "><a href="/login" class="btn">Join</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -141,7 +141,8 @@
                     <h2 class="contact-title">Get in Touch</h2>
                 </div>
                 <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <h3 style="color:green;"><strong><%=message%></strong></h3>
+                    <form class="form-contact contact_form" action="/contact" method="POST" >
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
@@ -208,7 +209,7 @@
                         <div class="single-footer-caption mb-30">
                             <!-- logo -->
                             <div class="footer-logo mb-25">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="/"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
@@ -229,9 +230,9 @@
                         <div class="footer-tittle">
                             <h4>Platform</h4>
                             <ul>
-                                <li><a href="About us.html">About us</a></li>
-                                <li><a href="Events.html">Download application</a></li>
-                                <li><a href="Guide.html">A propos de</a></li>
+                                <li><a href="/about-us">About us</a></li>
+                                <li><a href="/events">Download application</a></li>
+                                <li><a href="/guide">A propos de</a></li>
                             </ul>
                         </div>
                     </div>
@@ -242,7 +243,7 @@
                             <h4>Get in touch</h4>
                             <ul>
                                 <li>+216 55555555</li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="/contact">Contact us</a></li>
                                 
                             </ul>
                         </div>
