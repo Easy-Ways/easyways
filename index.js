@@ -66,7 +66,7 @@ app.use('/pricing',pricing);
 app.use('/guide',guide);
 app.use('/contact',contact);
 app.use('/about-us',aboutus);
-app.use('/register', signup).listen(4000);
+app.use('/register', signup);
 app.use('/', section)
 app.use('/subscription',subscription);
 app.use('/login',signin);
