@@ -59,7 +59,7 @@ mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/
 //getting data
 app.use(bodyparser.json());
 //html render
-
+let port = process.env.port || 8080;
 //landboard views
 app.use('/events',events);
 app.use('/pricing',pricing);
