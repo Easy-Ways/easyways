@@ -47,7 +47,7 @@ app.use((req, res, next) => {
     next();
   });
 //mongoconnect
-mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://testing:testingattentionplz@cluster0.p8qqu3t.mongodb.net/?retryWrites=true&w=majority')
   .then(()=>{
     console.log("DB Connected");
   })
@@ -59,7 +59,6 @@ mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/
 //getting data
 app.use(bodyparser.json());
 //html render
-let port = process.env.port || 8080;
 //landboard views
 app.use('/events',events);
 app.use('/pricing',pricing);
@@ -67,7 +66,7 @@ app.use('/guide',guide);
 app.use('/contact',contact);
 app.use('/about-us',aboutus);
 app.use('/register', signup);
-app.use('/', section)
+app.use('/', section).listen(4000);
 app.use('/subscription',subscription);
 app.use('/login',signin);
 app.use('/activate-acc',activate);
