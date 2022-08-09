@@ -15,7 +15,6 @@ exports.save = (req,res,next)=>{
         sched.m2[date]= req.body.m2
         sched.m3[date]= req.body.m3
         sched.m4[date]= req.body.m4
-        console.log(sched);
         sched.save().then(()=>{
             res.render('scheduleuploader.html',{
                 message:'Schedule updated !'
