@@ -11,10 +11,18 @@ exports.save = (req,res,next)=>{
     .then((sched)=>{
         var date = req.body.day;
         if(sched){
-        sched.m1[date]= req.body.m1
-        sched.m2[date]= req.body.m2
-        sched.m3[date]= req.body.m3
-        sched.m4[date]= req.body.m4
+            if(req.body.m1){
+                sched.m1[date]= req.body.m1;
+            }
+            if(req.body.m2){
+                sched.m2[date]= req.body.m2;
+            }
+            if(req.body.m3){
+                sched.m3[date]= req.body.m3;
+            }
+            if(req.body.m4){
+                sched.m4[date]= req.body.m4;
+            }
         sched.save().then(()=>{
             res.render('scheduleuploader.html',{
                 message:'Schedule updated !'
