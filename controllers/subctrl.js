@@ -20,9 +20,18 @@ exports.rendere = (req,res,next) =>{
     if(!id){
       return res.redirect('/login');
     }
-    res.render('Subscription.html',{
-      message:' '
-    });
+    user.findOne({_id:id}).then((User)=>{
+      sub.find({section:User.section}).then((subs)=>{
+        console.log(subs[0]);
+      res.render('Subscription.html',{
+        ms:'',
+        mp:'',
+        ys:'',
+        yp:'',
+        message:' '
+      });})
+    })
+    
 };
 exports.save = (req,res,next)=>{
     user.findOne({_id: id}, (err, obb) => {
@@ -32,10 +41,6 @@ exports.save = (req,res,next)=>{
           if(!obb){
             
           }else{
-            
-
-
-            
             if(req.body.subject) {
               obb.subscription = req.body.subject;
             }else{
@@ -44,8 +49,9 @@ exports.save = (req,res,next)=>{
               })
             }
           }
-          sub.find({section:obb.section}).then((subs)=>{
+          
           obb.save(() => {
+            
             const access = oAuth2client.getAccessToken();
             let transporter = nodemailer.createTransport({
               service: 'gmail',
@@ -75,7 +81,7 @@ exports.save = (req,res,next)=>{
             })
           });
             
-          });})
+          });
         }
       });
 };

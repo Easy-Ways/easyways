@@ -76,11 +76,12 @@
                                         <p>Pick subjects :</p>
                                     </div>
                                     <ul class="list-group text-center">
+                                        <%for(let i =0; i<=ms.length;i++){%>
                                         <li class="list-group-item"></i>
-                                            <input type="checkbox" name="subject" value="">
-                                            <label class="subject" style="font-size:large;"></label>
+                                            <input type="checkbox" name="subject" value="<%=ms[i]%>">
+                                            <label class="subject" style="font-size:large;"><%=ms[i]%></label>
                                         </li>
-                                        
+                                        <%}%>
                                     </ul>
                                     
                                 </div>
@@ -102,10 +103,12 @@
                                         <p>Pick Subjects:</p>
                                     </div>
                                     <ul class="list-group text-center">
+                                        <%for(let i =0; i<=ys.length;i++){%>
                                         <li class="list-group-item"></i>
-                                            <input type="checkbox" name="subject" value="">
-                                            <label class="subject" style="font-size:large;"></label>
+                                            <input type="checkbox" name="subject" value="<%=ys[i]%>">
+                                            <label class="subject" style="font-size:large;"><%=ys[i]%></label>
                                         </li>
+                                        <%}%>
                                     </ul>
                                     
                                 </div>
