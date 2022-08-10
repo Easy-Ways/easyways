@@ -1,3 +1,4 @@
+const sub = require('../data-schema/subscriptions');
 var url = require('url');
 var urll="xx";
 var id;
@@ -32,6 +33,9 @@ exports.save = (req,res,next)=>{
             
           }else{
             
+
+
+            
             if(req.body.subject) {
               obb.subscription = req.body.subject;
             }else{
@@ -40,6 +44,7 @@ exports.save = (req,res,next)=>{
               })
             }
           }
+          sub.find({section:obb.section}).then((subs)=>{
           obb.save(() => {
             const access = oAuth2client.getAccessToken();
             let transporter = nodemailer.createTransport({
@@ -70,7 +75,7 @@ exports.save = (req,res,next)=>{
             })
           });
             
-          });
+          });})
         }
       });
 };
