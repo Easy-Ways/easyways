@@ -20,7 +20,9 @@ const userSchema = mongoose.Schema({
     last_cour: {type:String, default:'Not Yet!'},
     cour_progress: {type: Number, default:'0' },
     finished_cours: [{ type: String }],
-    type: { type : String},
+    type: { type : String,default:'Student'},
+    paymentac: {type :  Number ,default:0},
+    paymentot:{type : Number,default:0},
 });
 userSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('User', userSchema);
