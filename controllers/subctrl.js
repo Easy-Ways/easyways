@@ -15,6 +15,7 @@ var ms;
 var mp;
 var ys;
 var yp;
+var total;
 oAuth2client.setCredentials({refresh_token: REFRESH_TOKEN});
 exports.rendere = (req,res,next) =>{
     urll = `${req.protocol}://${req.get("host")}${req.originalUrl}`;
@@ -58,6 +59,17 @@ exports.save = (req,res,next)=>{
           }else{
             if(req.body.subject) {
               obb.subscription = req.body.subject;
+              total=0;
+              for(let i='0';i< obb.subscription.length;i++){
+                  if(ms.indexOf(obb.subscription[i])!=-1){
+                    total+=mp[ms.indexOf(obb.subscription[i])];
+                  }
+                  else{
+                    total+=yp[ys.indexOf(obb.subscription[i])];
+                  }
+              }
+              obb.paymentot= total;
+              console.log(total);
             }else{
               return res.render('subscription.html',{
                 message: 'Choose at least one subject!'
