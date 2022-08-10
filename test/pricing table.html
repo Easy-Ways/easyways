@@ -17,19 +17,26 @@
         <br/><br/><br/>
         
         <!-- Plans -->
+
         <section id="plans">
             <div class="container">
                 <div class="row d-flex justify-content-center align-content-center">
     
                     <!-- item -->
-                    <div class=" text-center" style="width:30vw;">
-                        <div class="panel panel-blue panel-pricing">
+                    <div class=" text-center myPopover" style="width:30vw;" data-toggle="popover"
+                     title="Detailed Prices:"
+                    data-trigger="hover"
+                    data-html="true"
+                    data-placement="left"
+                    data-container="body"   
+                    data-content="Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt" >
+                        <div class="panel  panel-pricing">
                             <div class="panel-heading panel-violet">
                                 
                                 <h3>Monthly Plans</h3>
                             </div>
                             <div class="panel-body text-center">
-                                <p><strong>$100 / Month</strong></p>
+                                <p>Pick subjects :</p>
                             </div>
                             <ul class="list-group text-center">
                                 <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
@@ -40,19 +47,20 @@
                         </div>
                     </div>
                     <!-- /item -->
-    
-                    
-                    
-    
+                        
                     <!-- item -->
-                    <div class=" text-center" style="width:30vw;">
+                    <div class=" text-center myPopover" style="width:30vw;" data-toggle="popover"
+                    data-placement="right" title="Detailed Prices:"
+                    data-trigger="hover"
+                    data-html="true"
+                    data-content="Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt" >
                         <div class="panel  panel-pricing">
                             <div class="panel-heading panel-blue">
                                 
                                 <h3>Yearly Plans</h3>
                             </div>
                             <div class="panel-body text-center">
-                                <p><strong>$300 / Month</strong></p>
+                                <p>Pick Subjects:</p>
                             </div>
                             <ul class="list-group text-center">
                                 <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
@@ -62,5 +70,14 @@
                             
                         </div>
                     </div>
-</body>
+                </section>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      
+            <script>
+                $('.myPopover').popover();
+            </script>
+      
+        </body>
 </html>
