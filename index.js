@@ -25,6 +25,7 @@ const schedule = require('./routers/schedule');
 const fpass = require('./routers/fpass');
 const reset = require('./routers/reset');
 const sch_up = require('./routers/sch-up');
+const sub_up = require('./routers/sub-up');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -83,4 +84,5 @@ app.use('/Schedule',schedule);
 app.use('/uploader',uploader);
 //admin-dashboard
 app.use('/sch-up',sch_up);
+app.use('/sub-up',sub_up);
  

@@ -39,5 +39,13 @@
     background-color:#2265e2 ;
 }
 .panel-violet{
-    background-color:#892ff0 ;
+    background-color:#2f49f0 ;
+}
+.myPopover-title {
+  color: blue;
+  font-size: 15px;
+}
+.popover-content {
+  color: red;
+  font-size: 10px;
 }

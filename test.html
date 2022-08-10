@@ -48,37 +48,39 @@
     
         <!-- Login Admin -->
         <form class="form-default" action="/subscription" method="POST" required>
-            <div class="login-form">
+            <div class="login-form ">
                 <!-- logo-login -->
                 <div class="logo-login">
                     <img src="assets/img/logo/Easy-Ways.png" alt="">
                 </div>
-                <h2 id="Select">Choose your subjects</h2>
+                <h2 id="Select">Choose your subjects:</h2>
                 <h2 style="color: red;"><%=message%></h2>
                 <section id="plans">
                     <div class="container">
-                        <div class="row d-flex justify-content-center align-content-center">
+                        <div class="row d-flex justify-content-center align-content-center align-items-center ">
             
                             <!-- item -->
                             <div class=" text-center myPopover" style="width:30vw;" data-toggle="popover"
-                             title="Detailed Prices:"
+                            title="<p style='font-size:large;'>Detailed Prices:</p>"
                             data-trigger="hover"
                             data-html="true"
                             data-placement="left"
-                            data-container="body"   
-                            data-content="Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt" >
+                            data-container="body"
+                            data-content="<p style='font-size:large;'>Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt</p>" >
                                 <div class="panel  panel-pricing">
                                     <div class="panel-heading panel-violet">
                                         
-                                        <h3>Monthly Plans</h3>
+                                        <h3 style="color:black;">Monthly Plans</h3>
                                     </div>
                                     <div class="panel-body text-center">
                                         <p>Pick subjects :</p>
                                     </div>
                                     <ul class="list-group text-center">
-                                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
-                                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
-                                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
+                                        <li class="list-group-item"></i>
+                                            <input type="checkbox" name="subject" value="">
+                                            <label class="subject" style="font-size:large;"></label>
+                                        </li>
+                                        
                                     </ul>
                                     
                                 </div>
@@ -87,30 +89,44 @@
                                 <br> <br>
                             <!-- item -->
                             <div class=" text-center myPopover" style="width:30vw;" data-toggle="popover"
-                            data-placement="right" title="Detailed Prices:"
+                            data-placement="right" title="<p style='font-size:large;'>Detailed Prices:</p>"
                             data-trigger="hover"
                             data-html="true"
-                            data-content="Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt" >
+                            data-content="<p style='font-size:large;'>Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt</p>" >
                                 <div class="panel  panel-pricing">
                                     <div class="panel-heading panel-blue">
                                         
-                                        <h3>Yearly Plans</h3>
+                                        <h3 style="color:black;">Yearly Plans</h3>
                                     </div>
                                     <div class="panel-body text-center">
                                         <p>Pick Subjects:</p>
                                     </div>
                                     <ul class="list-group text-center">
-                                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
-                                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
-                                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
+                                        <li class="list-group-item"></i>
+                                            <input type="checkbox" name="subject" value="">
+                                            <label class="subject" style="font-size:large;"></label>
+                                        </li>
                                     </ul>
                                     
                                 </div>
                             </div>
+                        
+                            <br>
+                            <br>
+                            <button type="submit"  style="background-color: #ffffff;
+                            color: black;
+                            border: none;
+                            border-radius: 5px;
+                            margin-top: 15px;
+                            font-size:large;
+                            height: 30px;
+                            width:130px;">Submit</button>
+                            
+                            </div>
+                            
+                            </div>
                         </section>
-                <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="Submit">
-                </div>
+                        
             </div>
             
         </form>
