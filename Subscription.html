@@ -48,7 +48,7 @@
     
         <!-- Login Admin -->
         <form class="form-default" action="/subscription" method="POST" required>
-            <div class="login-form ">
+            <div class="subme ">
                 <!-- logo-login -->
                 <div class="logo-login">
                     <img src="assets/img/logo/Easy-Ways.png" alt="">
@@ -66,7 +66,7 @@
                             data-html="true"
                             data-placement="left"
                             data-container="body"
-                            data-content="<p style='font-size:large;'>Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt</p>" >
+                            data-content="<%for(let i =0; i< ms.length;i++){%><p style='font-size:large;'><%=ms[i]%> : <%=mp[i]%> <%}%></p>" >
                                 <div class="panel  panel-pricing">
                                     <div class="panel-heading panel-violet">
                                         
@@ -76,7 +76,7 @@
                                         <p>Pick subjects :</p>
                                     </div>
                                     <ul class="list-group text-center">
-                                        <%for(let i =0; i<=ms.length;i++){%>
+                                        <%for(let i =0; i< ms.length;i++){%>
                                         <li class="list-group-item"></i>
                                             <input type="checkbox" name="subject" value="<%=ms[i]%>">
                                             <label class="subject" style="font-size:large;"><%=ms[i]%></label>
@@ -93,7 +93,7 @@
                             data-placement="right" title="<p style='font-size:large;'>Detailed Prices:</p>"
                             data-trigger="hover"
                             data-html="true"
-                            data-content="<p style='font-size:large;'>Science :30dt<br> Math:50dt <br> Info:50dt <br> Physique:80dt</p>" >
+                            data-content="<%for(let i =0; i< ys.length;i++){%><p style='font-size:large;'><%=ys[i]%> : <%=yp[i]%> <%}%></p>" >
                                 <div class="panel  panel-pricing">
                                     <div class="panel-heading panel-blue">
                                         
@@ -103,7 +103,7 @@
                                         <p>Pick Subjects:</p>
                                     </div>
                                     <ul class="list-group text-center">
-                                        <%for(let i =0; i<=ys.length;i++){%>
+                                        <%for(let i =0; i< ys.length;i++){%>
                                         <li class="list-group-item"></i>
                                             <input type="checkbox" name="subject" value="<%=ys[i]%>">
                                             <label class="subject" style="font-size:large;"><%=ys[i]%></label>
@@ -123,7 +123,7 @@
                             margin-top: 15px;
                             font-size:large;
                             height: 30px;
-                            width:130px;">Submit</button>
+                            width:130px;"><input type="submit">Submit</button>
                             
                             </div>
                             

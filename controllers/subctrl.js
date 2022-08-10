@@ -11,6 +11,10 @@ const CLIENT_SECRET = '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';
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground/';
 const REFRESH_TOKEN = '1//04a3x4OFqrFGZCgYIARAAGAQSNwF-L9Ir6zFzlaAouALyL7sdEkCScXCkD27rlLk2bzhz_Gq7UJ2j5RRpeNdPIFvgx1cHlviXSf4';
 const oAuth2client = new google.auth.OAuth2(CLIENT_ID,CLIENT_SECRET,REDIRECT_URI);
+var ms;
+var mp;
+var ys;
+var yp;
 oAuth2client.setCredentials({refresh_token: REFRESH_TOKEN});
 exports.rendere = (req,res,next) =>{
     urll = `${req.protocol}://${req.get("host")}${req.originalUrl}`;
@@ -22,12 +26,23 @@ exports.rendere = (req,res,next) =>{
     }
     user.findOne({_id:id}).then((User)=>{
       sub.find({section:User.section}).then((subs)=>{
-        console.log(subs[0]);
+        if(subs[0].duration=='monthly'){
+           ms = subs[0].subjects;
+           mp = subs[0].prices;
+           ys = subs[1].subjects;
+           yp = subs[1].prices;
+        }else{
+           ms = subs[1].subjects;
+           mp = subs[1].prices;
+           ys = subs[0].subjects;
+           yp = subs[0].prices;
+        }
+        
       res.render('Subscription.html',{
-        ms:'',
-        mp:'',
-        ys:'',
-        yp:'',
+        ms:ms,
+        mp:mp,
+        ys:ys,
+        yp:yp,
         message:' '
       });})
     })
