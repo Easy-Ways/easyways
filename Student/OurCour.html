@@ -945,59 +945,28 @@
                                             </div>
                                         </div>
                                         <div class="blog-details blog-sig-details">
-                                            <%resumeuser.forEach(res => {%>
                                             <div class="details-blog-dt blog-sig-details-dt courses-info mobile-sm-d-n">
-                                                <span><a href="#"><i class="fa fa-user"></i> <b>Course Name: </b><%=res.name%></a></span>
-                                                <span><a href="#"><i class="fa fa-heart"></i> <b>Course Duration: </b> <%=res.hours%>h</a></span>
-                                                <span><a href="#"><i class="fa fa-comments-o"></i> <b>Professor Name: </b> <%=res.teacher%></a></span>
+                                                <span><a href="#"><i class="fa fa-user"></i> <b>Course Name: </b><%=resumeuser.name%></a></span>
+                                                <span><a href="#"><i class="fa fa-heart"></i> <b>Course Duration: </b> <%=resumeuser.hours%>h</a></span>
+                                                <span><a href="#"><i class="fa fa-comments-o"></i> <b>Professor Name: </b> <%=resumeuser.teacher%></a></span>
                                             </div>
-                                            <%})%>
-                                            <h1><a class="blog-ht" style="color:red ;" href="#">Notion de continuité</a></h1>
-                                            <p>Graphiquement, on peut reconnaître une fonction continue sur un intervalle I par le fait que le tracé de la 
-                                                courbe représentative de f pour x Œ I peut se faire sans lever le crayon de la feuille.</p>
-                                            <p>Les fonctions polynômes, les fonctions rationnelles, la fonction racine carrée sont continues sur tout 
-                                                intervalle sur le quel sont définies. </p>
-                                            <p><h4 style="color: rgb(6, 129, 185);">Règles opératoires</a></h4>
-                                                La limite en +oo ou en -oo d’une fonction polynôme est égale à la limite de son terme de plus haut degré.<br> 
-                                                La limite en +oo ou en -oo d’une fonction rationnelle est égale à la limite du quotient de ses termes de plus 
-                                                haut degré.</p><hr> 
-                                                <h1><a class="blog-ht" style="color:red;" href="#">Continuité et limite d’une fonction composée</a></h1>
-                                                <p><h4 style="color: rgb(6, 129, 185);">Définition</a></h4>
-                                                    Soit f une fonction définie sur un ensemble I et g une fonction définie sur ensemble J tel que f(I) C J . 
-                                                    La fonction notée gof , définie sur I par g o f(x) = g [ f(x)], est appelée fonction composée de f et g.</p>
-                                                <p>Les fonctions polynômes, les fonctions rationnelles, la fonction racine carrée sont continues sur tout 
-                                                    intervalle sur le quel sont définies. </p><hr>    
-                                                <h1><a class="blog-ht" style="color:red;" href="#">Limites et ordre</a></h1>
-                                                <div class="blog-image">
-                                                    <center>
-                                                        <img src="img/courses/comparaison.png" alt="" />
-                                                    </center>   
-                                                </div>
-                                                <hr>
-                                                <h1><a class="blog-ht" style="color:red;" href="#">Image d’un intervalle par une fonction continue</a></h1>
-                                                <p><h4 style="color: rgb(6, 129, 185);">Théorème des valeurs intermédiaires</a></h4>
-                                                    Soit f une fonction définie et continue 
-                                                    sur un intervalle I.
-                                                    Soient a Œ I  et b Œ I. 
-                                                    Pour tout réel k compris entre f(a) et f(b) , 
-                                                    il existe au moins un réel c compris entre a et b 
-                                                    tel que f(c) = k
-                                                </p>
+                                            <hr>
+                                            <h1>Welcome to Course Area</h1>
+                                            <p>Contact us , if you don't understand something.</p>
+                                            <hr>
+                                            <iframe style="width: 80vw;height: 100vh;margin-top: 0;" src="pdfs/<%=resumeuser.pdf%>"></iframe>
+                                            <hr>
+                                            <h3>This video will help guide you to understand your course.</h3>
+                                            <p>Take your time in this part.</p>
+                                            <hr>
                                                 <center>
                                                     <video width="500" height="400" controls>
                                                         <source src="" type="video/mp4">
                                                     </video>  
                                                 </center>
-                                                <hr>
-                                                <h1>Let's Recap!</a></h1>
-                                                <div>
-                                                    <ol>
-                                                        <li>Comment calculer les limites graphiquement et analytiquement.</li>
-                                                        <li>Continuité d'une fonction dans un untervalle et en un point.</li>
-                                                        <li>Image d'un intervalle et theorème des valeurs intermédiares.</li>
-                                                    </ol>
-                                                </div>
-                                                <hr>
+                                            <hr>
+                                            <h4>Good job finishing this chapter , go to do some exercices to upgrade your performance.</h4>
+                                            <p>Don't forget to click here , to update your course progress.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1007,7 +976,7 @@
                                     <form id="comment" action="/Progress" class="comment" method="POST">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="payment-adress comment-stn">
-                                                <button type="submit" class="btn btn-primary waves-effect waves-light">I Finish This Chapter</button>
+                                                <button style="font-size:22px ;margin-left: 390px; height:50px ; width: 280px ;" type="submit" class="btn btn-primary waves-effect waves-light">I Finish This Chapter</button>
                                             </div>
                                         </div>
                                     </form>

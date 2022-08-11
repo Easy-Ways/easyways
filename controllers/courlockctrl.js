@@ -15,7 +15,7 @@ exports.rendere = (req,res,next) => {
         var data = url.parse(urll,true);
         var q= data.query;
         nome=q.s;
-        Cour.find({name: nome,
+        Cour.findOne({name: nome,
                     section: User.section
         }).then(
             (resume) => {
