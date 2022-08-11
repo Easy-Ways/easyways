@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "14": "^3.1.6",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
     "bootstrap-select": "^1.13.18",
@@ -8,19 +9,22 @@
     "express": "^4.18.1",
     "fs": "^0.0.1-security",
     "googleapis": "^105.0.0",
+    "gridfs": "^1.0.0",
     "json-web-token": "^3.2.0",
     "mongoose": "^6.4.3",
     "mongoose-unique-validator": "^3.1.0",
     "multer": "^1.4.5-lts.1",
+    "multer-gridfs-storage": "^5.0.2",
+    "node-gyp": "^9.1.0",
     "node-sass": "^7.0.1",
     "nodemailer": "^6.7.7",
     "nodemon": "^2.0.19",
     "path": "^0.12.7",
     "regex": "^0.1.1",
+    "scss-tokenizer": "^0.4.3",
     "url": "^0.11.0"
   },
   "name": "landboard",
-  "description": "Thank you for using our template!",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

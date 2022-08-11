@@ -26,6 +26,7 @@ const fpass = require('./routers/fpass');
 const reset = require('./routers/reset');
 const sch_up = require('./routers/sch-up');
 const sub_up = require('./routers/sub-up');
+const payment = require('./routers/payment');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -73,6 +74,7 @@ app.use('/login',signin);
 app.use('/activate-acc',activate);
 app.use('/forgetpass',fpass);
 app.use('/resetpass',reset);
+app.use('/payment',payment);
 //student-dashboard
 app.use('/home',home);
 app.use('/search', search);

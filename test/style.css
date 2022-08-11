@@ -49,3 +49,18 @@
   color: red;
   font-size: 10px;
 }
+.pay{
+  margin: 25px;
+  padding:5px;
+  width:100%;
+  border:1px solid transparent;
+    transition: border 0.5s;
+    text-decoration: none;
+}
+.pay:hover{
+  border: 1px solid black;
+}
+.pay p {
+  
+  font-size: 20px;
+}

@@ -103,8 +103,8 @@ exports.save = (req,res,next)=>{
               html: data, // plain text body
             });
             transporter.sendMail(info,()=>{
-              
-              res.redirect('/login');
+              console.log('')
+              res.redirect('/payment?id=' + id);
             })
           });
             
