@@ -25,12 +25,9 @@ const schedule = require('./routers/schedule');
 const fpass = require('./routers/fpass');
 const reset = require('./routers/reset');
 const sch_up = require('./routers/sch-up');
-<<<<<<< Updated upstream
 const sub_up = require('./routers/sub-up');
 const payment = require('./routers/payment');
-=======
 
->>>>>>> Stashed changes
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -90,9 +87,6 @@ app.use('/Schedule',schedule);
 
 //admin-dashboard
 app.use('/sch-up',sch_up);
-<<<<<<< Updated upstream
 app.use('/sub-up',sub_up);
- 
-=======
 app.use('/uploader',uploader);
->>>>>>> Stashed changes
+
