@@ -25,8 +25,12 @@ const schedule = require('./routers/schedule');
 const fpass = require('./routers/fpass');
 const reset = require('./routers/reset');
 const sch_up = require('./routers/sch-up');
+<<<<<<< Updated upstream
 const sub_up = require('./routers/sub-up');
 const payment = require('./routers/payment');
+=======
+
+>>>>>>> Stashed changes
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -49,7 +53,7 @@ app.use((req, res, next) => {
     next();
   });
 //mongoconnect
-mongoose.connect('mongodb+srv://testing:testingattentionplz@cluster0.p8qqu3t.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority')
   .then(()=>{
     console.log("DB Connected");
   })
@@ -83,8 +87,12 @@ app.use('/Courses', course);
 app.use('/OurCour',courlock);
 app.use('/Progress', cour_progress);
 app.use('/Schedule',schedule);
-app.use('/uploader',uploader);
+
 //admin-dashboard
 app.use('/sch-up',sch_up);
+<<<<<<< Updated upstream
 app.use('/sub-up',sub_up);
  
+=======
+app.use('/uploader',uploader);
+>>>>>>> Stashed changes
