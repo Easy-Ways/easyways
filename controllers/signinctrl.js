@@ -12,6 +12,12 @@ exports.signin = (req,res,next)=>{
           });
           
         }
+        if(User.paymentac==0){
+          return res.render('login.html',{
+            message:'Account Payment still in progress!'
+          })
+        }
+        
         if(User.status===1){
           return res.render('login.html',{
             message:'User already logged in another device!'

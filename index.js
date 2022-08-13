@@ -27,7 +27,9 @@ const reset = require('./routers/reset');
 const sch_up = require('./routers/sch-up');
 const sub_up = require('./routers/sub-up');
 const payment = require('./routers/payment');
-
+const paymethod = require('./routers/paymethod');
+const bank = require('./routers/bank');
+const d17 = require('./routers/d17')
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -50,7 +52,7 @@ app.use((req, res, next) => {
     next();
   });
 //mongoconnect
-mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://testing:testingattentionplz@cluster0.p8qqu3t.mongodb.net/?retryWrites=true&w=majority')
   .then(()=>{
     console.log("DB Connected");
   })
@@ -76,6 +78,9 @@ app.use('/activate-acc',activate);
 app.use('/forgetpass',fpass);
 app.use('/resetpass',reset);
 app.use('/payment',payment);
+app.use('/pay',paymethod);
+app.use('/bank',bank);
+app.use('/d17',d17);
 //student-dashboard
 app.use('/home',home);
 app.use('/search', search);

@@ -23,6 +23,7 @@ const userSchema = mongoose.Schema({
     type: { type : String,default:'Student'},
     paymentac: {type :  Number ,default:0},
     paymentot:{type : Number,default:0},
+    paymentcode:{type: String},
 });
 userSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('User', userSchema);

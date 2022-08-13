@@ -19,7 +19,8 @@ exports.rendere = (req,res,next) =>{
     if(!id){
       return res.redirect('/login');
     }
-    user.findOne({_id:id}).then((User)=>{  
+    user.findOne({_id:id}).then((User)=>{ 
+      var string = encodeURIComponent(User._id); 
       res.render('payment.html',{
         total:User.paymentot,
       });
