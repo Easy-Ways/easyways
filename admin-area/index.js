@@ -11,6 +11,7 @@ const course = require('./routers/allcourses');
 const logout = require('./routers/logout');
 const cookieParser = require('cookie-parser');
 const student = require('./routers/allstudent');
+const prof = require('./routers/allprof');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -46,6 +47,7 @@ app.use(bodyparser.json());
 app.use(cookieParser());
 //renders
 app.use('/all-students',student);
+app.use('/all-professors',prof);
 app.use('/all-courses',course);
 app.use('/login',signin).listen(3000);
 app.use('/home',home);

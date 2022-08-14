@@ -9,9 +9,9 @@ exports.rendere = (req,res,next) => {
     if(id!='010101'){
         return res.redirect('/login');
     }
-    User.find({type:'Student'}).then((users)=>{
-        res.render('all-students.html',{
-            studentlist:users,
+    User.find({type:'Teacher'}).then((profs)=>{
+        res.render('all-professors.html',{
+            proflist:profs,
         })
     })
     
