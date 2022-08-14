@@ -10,7 +10,7 @@ const sub_up = require('./routers/sub-up');
 const course = require('./routers/allcourses');
 const logout = require('./routers/logout');
 const cookieParser = require('cookie-parser');
-const addprof = require('./routers/addprof');
+const student = require('./routers/allstudent');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
     next();
   });
 //mongoconnect
-mongoose.connect('mongodb+srv://testing:testingattentionplz@cluster0.p8qqu3t.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority') 
   .then(()=>{
     console.log("DB Connected");
   })
@@ -45,7 +45,7 @@ mongoose.connect('mongodb+srv://testing:testingattentionplz@cluster0.p8qqu3t.mon
 app.use(bodyparser.json());
 app.use(cookieParser());
 //renders
-app.use('/add-prof',addprof);
+app.use('/all-students',student);
 app.use('/all-courses',course);
 app.use('/login',signin).listen(3000);
 app.use('/home',home);
@@ -53,4 +53,5 @@ app.use('/sch-up',sch_up);
 app.use('/sub-up',sub_up);
 app.use('/uploader',uploader);
 app.use('/logout',logout);
+
 
