@@ -27,9 +27,16 @@ const reset = require('./routers/reset');
 const sch_up = require('./routers/sch-up');
 const sub_up = require('./routers/sub-up');
 const payment = require('./routers/payment');
+<<<<<<< Updated upstream
 const paymethod = require('./routers/paymethod');
 const bank = require('./routers/bank');
 const d17 = require('./routers/d17')
+=======
+const exercice = require('./routers/exercice');
+const method = require('./routers/method');
+const devoir = require('./routers/devoir');
+
+>>>>>>> Stashed changes
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -89,6 +96,9 @@ app.use('/Courses', course);
 app.use('/OurCour',courlock);
 app.use('/Progress', cour_progress);
 app.use('/Schedule',schedule);
+app.use('/Exercices',exercice);
+app.use('/Methods',method);
+app.use('/Devoirs',devoir);
 
 //admin-dashboard
 app.use('/sch-up',sch_up);

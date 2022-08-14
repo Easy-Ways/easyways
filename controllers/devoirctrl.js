@@ -18,13 +18,13 @@ exports.rendere = (req,res,next) => {
         name=q.m;
         Cour.find({subject: name,
                     section: User.section,
-                    type: 'cour'
+                    type: 'devoir'
         }).then(
-            (cours) => {
+            (devoir) => {
               notif.find({class: User.class}).then((nots)=>{
-                res.render('Courses.html', {
+                res.render('Devoirs.html', {
                     studentuser: User,
-                    courlist: cours,
+                    courlist: devoir,
                     noteuser: nots,
                   });
               })

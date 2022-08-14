@@ -96,9 +96,9 @@
                                     <a class="has-arrow" href="#" aria-expanded="false"> <span class="mini-sub-pro"><u><%=studentuser.subscription[i]%></u></span></a>
                                     <ul class="submenu-angle" aria-expanded="false">
                                         <li><a title="Math | Courses" href="/Courses?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Courses</span></a></li>
-                                        <li><a title="Math | Methodes" href="/Methods"><span class="mini-sub-pro">Methodes</span></a></li>
-                                        <li><a title="Math | Exercices" href="/Exercices"><span class="mini-sub-pro">Exercices</span></a></li>
-                                        <li><a title="Math | Devoirs" href="/Devoirs"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                        <li><a title="Math | Methodes" href="/Methods?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Methodes</span></a></li>
+                                        <li><a title="Math | Exercices" href="/Exercices?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Exercices</span></a></li>
+                                        <li><a title="Math | Devoirs" href="/Devoirs?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Devoirs</span></a></li>
                                     </ul>
                                 </li>
                                 <% } %>
@@ -360,7 +360,7 @@
                             
                             <ul class="country-state">
                                 <li>
-                                    <h2><span><a style="color: rgb(59, 59, 59);" href="">Cours</a></span></h2> 
+                                    <h2><span><a style="color: rgb(59, 59, 59);" href="/OurCour?s=<%=studentuser.last_cour%>">Cours</a></span></h2> 
                                     <div class="pull-right">80% <i class="fa fa-level-up text-danger ctn-ic-1"></i></div>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">10% Complete</span></div>

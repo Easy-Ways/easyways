@@ -88,17 +88,21 @@
                                 <a title="Landing Page" href="Schedule.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Schedule</span></a>
                             </li>
                             <li>
-                                <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
+                                <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
+                                    
+                                        <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
                                     <li>
-                                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"> <span class="mini-click-non"><u>Math</u></span></a>
+                                        <a class="has-arrow" href="#" aria-expanded="false"> <span class="mini-sub-pro"><u><%=studentuser.subscription[i]%></u></span></a>
                                         <ul class="submenu-angle" aria-expanded="false">
-                                            <li><a title="Math | Courses" href="Courses.html"><span class="mini-sub-pro">Courses</span></a></li>
-                                            <li><a title="Math | Methodes" href="Methods.html"><span class="mini-sub-pro">Methodes</span></a></li>
-                                            <li><a title="Math | Exercices" href="Exercices.html"><span class="mini-sub-pro">Exercices</span></a></li>
-                                            <li><a title="Math | Devoirs" href="Devoirs.html"><span class="mini-sub-pro">Devoirs</span></a></li>
+                                            <li><a title="Math | Courses" href="/Courses?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Courses</span></a></li>
+                                            <li><a title="Math | Methodes" href="/Methods?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Methodes</span></a></li>
+                                            <li><a title="Math | Exercices" href="/Exercices?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Exercices</span></a></li>
+                                            <li><a title="Math | Devoirs" href="/Devoirs?m=<%=studentuser.subscription[i]%>"><span class="mini-sub-pro">Devoirs</span></a></li>
                                         </ul>
                                     </li>
+                                    <% } %>
+                                    
                                 </ul>
                             </li>
                             <li>
