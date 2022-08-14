@@ -7,8 +7,10 @@ const home = require('./routers/home');
 const uploader = require('./routers/upload');
 const sch_up = require('./routers/sch-up');
 const sub_up = require('./routers/sub-up');
-const signin = require('./routers/signin');
-const home = require('./routers/home');
+const course = require('./routers/allcourses');
+const logout = require('./routers/logout');
+const cookieParser = require('cookie-parser');
+const addprof = require('./routers/addprof');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -38,14 +40,17 @@ mongoose.connect('mongodb+srv://testing:testingattentionplz@cluster0.p8qqu3t.mon
   .catch((error)=>{
     console.error(error);
   })
-  //cookies
-  app.use(cookieParser())
+
 //getting data
 app.use(bodyparser.json());
+app.use(cookieParser());
 //renders
-app.use('/login',signin)
-app.use('/',home);
+app.use('/add-prof',addprof);
+app.use('/all-courses',course);
+app.use('/login',signin).listen(3000);
+app.use('/home',home);
 app.use('/sch-up',sch_up);
 app.use('/sub-up',sub_up);
 app.use('/uploader',uploader);
+app.use('/logout',logout);
 

@@ -80,58 +80,48 @@
                         <ul class="metismenu" id="menu1">
                             <li class="active">
                                 <a  href="/home">
-                                    <span class="educate-icon educate-home icon-wrap"></span>
-                                    <span title="Home" class="mini-click-non">Home</span>
+                                       <span class="educate-icon educate-home icon-wrap"></span>
+                                       <span title="Home" class="mini-click-non">Home</span>
                                     </a>
+                               
+                            </li>
                             
-                            </li>
                             <li>
-                                <a title="Events" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Manage Events</span></a>
-                            </li>
-                            <li >
-                                <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Manage Profs</span></a>
+                                <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Manage Profs</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
                                     <li><a title="All Professors" href="all-professors.html"><span class="mini-sub-pro">All Professors</span></a></li>
                                     <li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
-                                    <li><a title="Edit Professor" href="edit-professor.html"><span class="mini-sub-pro">Edit Professor</span></a></li>
+                                   
                                                                 </ul>
                             </li>
-                            <li  >
-                                <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Manage Students</span></a>
-                                <ul class="submenu-angle" aria-expanded="false">
-                                    <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
-                                    <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
-                                </ul>
+                            <li>
+                                <a  href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Manage Students</span></a>
                             </li>
-                            <li class="active">
-                                <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Manage Courses</span></a>
+                            <li>
+                                <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Manage Courses</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
                                     <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">All Courses</span></a></li>
-                                    <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
                                 </ul>
                             </li>
-                        
                             <li>
-                                <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">School Sections</span></a>
+                                <a  href="" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Bases</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                    <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Sections List</span></a></li>
-                                    <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Section</span></a></li>
-                                    <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Section</span></a></li>
+                                   
                                 </ul>
                             </li>
-                        
-                        
-                        
                             <li>
-                                <a  href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Bases</span></a>
+                                <a class="has-arrow" href="" aria-expanded="false"><i class="fa-solid fa-upload"></i> <span class="mini-click-non"> Uploaders</span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                
+                                    <li><a title="All Professors" href="/uploader"><span class="mini-sub-pro">Courses Uploader</span></a></li>
+                                    <li><a title="Add Professor" href="/sch-up"><span class="mini-sub-pro">Schedule Uploader</span></a></li>
+                                    <li><a title="Add Professor" href="/sub-up"><span class="mini-sub-pro">Subscription Uploader</span></a></li>
+                                   
                                 </ul>
                             </li>
-                        
-                            <li id="removable">
-                                <a  href="#" aria-expanded="false"><span class="educate-icon educate-pages icon-wrap"></span> <span class="mini-click-non">Logout</span></a>
-                                </li>
+                            <li>
+                                <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+                            </li>
+                              
                         </ul>
                     </nav>
                 </div>
@@ -832,10 +822,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="breadcome-heading">
-                                                <form role="search" class="sr-input-func">
-                                                    <input type="text" placeholder="Search..." class="search-int form-control">
-                                                    <a href="#"><i class="fa fa-search"></i></a>
-                                                </form>
+                                               
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -856,178 +843,29 @@
             <div class="courses-area">
                 <div class="container-fluid">
                     <div class="row">
+                        <%courlist.forEach(cours => {%>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                             <div class="courses-inner res-mg-b-30">
                                 <div class="courses-title">
-                                    <a href="#"><img src="img/courses/1.jpg" alt=""></a>
-                                    <h2>Apps Development</h2>
+                                    <a href="#"><img src="<%=cours.image%>" alt=""></a>
+                                    <h2><%=cours.name%></h2>
                                 </div>
                                 <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
+                                    
+                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> <%=cours.diff%></span>
                                 </div>
                                 <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>Type:</b> <%=cours.type%> </p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>Section:</b> <%=cours.section%></p>
+                                    
                                 </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
+                                
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/2.jpg" alt=""></a>
-                                    <h2>Illustrator CC 2018</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/3.jpg" alt=""></a>
-                                    <h2>Indesign cs6 2018</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/1.jpg" alt=""></a>
-                                    <h2>Web Development</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mg-b-15">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner mg-t-30">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/1.jpg" alt=""></a>
-                                    <h2>Apps Development</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner mg-t-30">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/2.jpg" alt=""></a>
-                                    <h2>Illustrator CC 2018</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner mg-t-30">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/3.jpg" alt=""></a>
-                                    <h2>Indesign cs6 2018</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <div class="courses-inner mg-t-30">
-                                <div class="courses-title">
-                                    <a href="#"><img src="img/courses/1.jpg" alt=""></a>
-                                    <h2>Web Development</h2>
-                                </div>
-                                <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
-                                </div>
-                                <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
-                                </div>
-                                <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
-                                </div>
-                            </div>
-                        </div>
+                    <%})%>
                     </div>
                 </div>
+            </div>
             </div>
             
         </div>

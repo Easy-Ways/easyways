@@ -19,6 +19,7 @@
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" >
     <!-- owl.carousel CSS
 		============================================ -->
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -98,53 +99,43 @@
 								</a>
                            
                         </li>
+                        
                         <li>
-                            <a title="Events" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Manage Events</span></a>
-                        </li>
-                        <li>
-                            <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Manage Profs</span></a>
+                            <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Manage Profs</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Professors" href="all-professors.html"><span class="mini-sub-pro">All Professors</span></a></li>
-                                <li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
-                                <li><a title="Edit Professor" href="edit-professor.html"><span class="mini-sub-pro">Edit Professor</span></a></li>
+                                <li><a title="All Professors" href="/all-professors"><span class="mini-sub-pro">All Professors</span></a></li>
+                                <li><a title="Add Professor" href="/add-professor"><span class="mini-sub-pro">Add Professor</span></a></li>
+                               
                                                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Manage Students</span></a>
+                            <a  href="/all-students" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Manage Students</span></a>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Manage Courses</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
-                                <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
+                                <li><a title="All Courses" href="/all-courses"><span class="mini-sub-pro">All Courses</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Manage Courses</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">All Courses</span></a></li>
-                                <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
-                            </ul>
-                        </li>
-                       
-                        <li>
-                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">School Sections</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Sections List</span></a></li>
-                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Section</span></a></li>
-                                <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Section</span></a></li>
-                            </ul>
-                        </li>
-                       
-                      
-                       
-                        <li>
-                            <a  href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Bases</span></a>
+                            <a  href="" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Bases</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                
                             </ul>
                         </li>
-                       
-                          <li id="removable">
-                            <a  href="#" aria-expanded="false"><span class="educate-icon educate-pages icon-wrap"></span> <span class="mini-click-non">Logout</span></a>
-                            </li>
+                        <li>
+                            <a class="has-arrow" href="" aria-expanded="false"><i class="fa-solid fa-upload"></i> <span class="mini-click-non"> Uploaders</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Professors" href="/uploader"><span class="mini-sub-pro">Courses Uploader</span></a></li>
+                                <li><a title="Add Professor" href="/sch-up"><span class="mini-sub-pro">Schedule Uploader</span></a></li>
+                                <li><a title="Add Professor" href="/sub-up"><span class="mini-sub-pro">Subscription Uploader</span></a></li>
+                               
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+                        </li>
+                          
                     </ul>
                 </nav>
             </div>
@@ -692,7 +683,7 @@
                                                                                     <h2>Show charts</h2>
                                                                                     <div class="ts-custom-check">
                                                                                         <div class="onoffswitch">
-                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" >
                                                                                             <label class="onoffswitch-label" for="example7">
 																									<span class="onoffswitch-inner"></span>
 																									<span class="onoffswitch-switch"></span>
@@ -776,7 +767,7 @@
                                     <ul class="mobile-menu-nav">
                                         <li><a data-toggle="collapse" data-target="#Charts" href="/home">Home <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                         </li>
-                                        <li><a href="events.html">Manage Events</a></li>
+                                       
                                         <li><a data-toggle="collapse" data-target="#demoevent" href="#">Manage Profs <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demoevent" class="collapse dropdown-header-top">
                                                 <li><a href="all-professors.html">All Professors</a>
@@ -792,32 +783,12 @@
                                             <ul id="demopro" class="collapse dropdown-header-top">
                                                 <li><a href="all-students.html">All Students</a>
                                                 </li>
-                                                <li><a href="add-student.html">Add Student</a>
-                                                </li>
                                                 <li><a href="edit-student.html">Edit Student</a>
                                                 </li>
                                                 
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#democrou" href="#">Manage Courses <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="democrou" class="collapse dropdown-header-top">
-                                                <li><a href="all-courses.html">All Courses</a>
-                                                </li>
-                                                <li><a href="course-payment.html">Courses Payment</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                       
-                                        <li><a data-toggle="collapse" data-target="#demodepart" href="#">School Sections<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="demodepart" class="collapse dropdown-header-top">
-                                                <li><a href="departments.html">Section list</a>
-                                                </li>
-                                                <li><a href="add-department.html">Add Section</a>
-                                                </li>
-                                                <li><a href="edit-department.html">Edit Section</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        
                                        
                                        
                                        
@@ -826,9 +797,7 @@
                                         </li>
                                         
                                        
-                                        <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Logout <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                           
-                                        </li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
