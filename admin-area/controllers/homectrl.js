@@ -4,40 +4,27 @@ const Cour = require ('../data-schema/courses') ;
 const Note = require('../data-schema/note');
 exports.rendere = (req,res,next)=>{ 
       var id =req.cookies.id;
-        if(id=='010101'){   
-<<<<<<< Updated upstream
-          User.find({type: 'Student'}).then(
+        if(id=='010101'){
+          User.find({type: 'Student' , paymentac: '0'}).then(
             (users) => {
-              
-                        res.render('home-admin.html', {
-                          studentlist: users,
-                          }); 
-                      }
-                    ).catch((error) => {
+              Note.findOne().then(
+                (notes) => {
+                  res.render('home-admin.html', {
+                    studentlist: users,
+                    notelist: notes,
+                    }); 
+                }
+              )
+            }).catch((error) => {
                   console.log(error);
                 });
-     
                      }else{
                       return res.redirect('/login');
                      }
-     
-=======
      }
-     User.find({type: 'Student' , paymentac: '0'}).then(
-      (users) => {
-        Note.findOne().then(
-          (notes) => {
-            res.render('home-admin.html', {
-              studentlist: users,
-              notelist: notes,
-              }); 
-          }
-        )
-      }).catch((error) => {
-            console.log(error);
-          });
->>>>>>> Stashed changes
-    }
+     
+
+    
 
 exports.note = (req,res) => {
   Note.findOne( {} , (err, Obj) => {
