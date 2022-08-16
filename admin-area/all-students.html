@@ -262,7 +262,9 @@
             <div class="contacts-area mg-b-15">
                 <div class="container-fluid">
                     <div class="row">
+                        <h2 style="color:green"><%=m%></h2>
                         <%studentlist.forEach(users => {%>
+                            
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                             <div class="student-inner-std res-mg-b-30">
                                 <div class="student-img">
@@ -274,6 +276,13 @@
                                     <p class="dp-ag">GSM: +216<%=users.phone%></p>
                                     <p class="dp-ag"><b>Class:</b> <%=users.class%></p>
                                     <p class="dp-ag"><b>Payment:</b> <%=users.paymentot%> TND</p>
+                                    <p class="dp-ag"><b>Payment Code:</b> <%=users.paymentcode%> </p>
+                                    <p class="dp-ag"><b>Payment Status:</b> <%=users.paymentac%> </p>
+                                    <br>
+                                    <form method="POST" action="/all-students">
+                                        <input type="hidden" value="<%=users._id%>" name="sid">
+                                        <button class="btn btn-primary" type="submit">Activate</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
