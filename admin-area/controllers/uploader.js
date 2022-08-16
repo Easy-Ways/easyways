@@ -4,8 +4,7 @@ exports.rendere = (req,res,next)=>{
         message:'',
     });
    };
-exports.upload = (req,res,next)=>{
-      
+exports.upload = (req,res,next)=>{ 
     const course = new Course ({
             name : req.body.name,
             hours : req.body.hours,

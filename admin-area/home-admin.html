@@ -209,16 +209,8 @@
                                                 
                                             </ul>
                                         </li>
-                                        
-                                       
-                                       
-                                       
-                                        <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Data Bases <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            
-                                        </li>
-                                        
-                                       
-                                        
+                                        <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Data Bases <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>                                         
+                                        </li>   
                                     </ul>
                                 </nav>
                             </div>
@@ -254,11 +246,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="analytics-sparkle-line reso-mg-b-30">
                             <div class="analytics-content">
-                                <h5>Total Improuvement</h5>
-                                <h2><span>We Can Do This</span> <span class="tuition-fees">Family</span></h2>
-                                <span class="text-success">70%</span>
+                                <h5>Contacts</h5>
+                                <h2><span class="counter"><%=contactlist.length%></span> <span class="tuition-fees">Need Help</span></h2>
+                                <span class="text-success"><%=100-contactlist.length*10%>%</span>
                                 <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%;"> <span class="sr-only">70% Complete</span> </div>
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=100-contactlist.length*10%>%;"> <span class="sr-only"><%=100-contactlist.length*10%>% Complete</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -267,10 +259,10 @@
                         <div class="analytics-sparkle-line reso-mg-b-30">
                             <div class="analytics-content">
                                 <h5>Students</h5>
-                                <h2><span class="counter">216</span> <span class="tuition-fees">Paid</span></h2>
-                                <span class="text-danger">30%</span>
+                                <h2><span class="counter"><%=studentuser.length%></span> <span class="tuition-fees">Paid</span></h2>
+                                <span class="text-danger"><%=studentuser.length/10%>%</span>
                                 <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:30%;"> <span class="sr-only">230% Complete</span> </div>
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=studentuser.length/10%>%;"> <span class="sr-only"><%=studentuser.length/10%>% Complete</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -279,10 +271,10 @@
                         <div class="analytics-sparkle-line reso-mg-b-30 table-mg-t-pro dk-res-t-pro-30">
                             <div class="analytics-content">
                                 <h5>Teachers</h5>
-                                <h2>$<span class="counter">450</span> <span class="tuition-fees">Unpaid</span></h2>
-                                <span class="text-info">60%</span>
+                                <h2><span class="counter"><%=teacherlist.length%></span> <span class="tuition-fees">Unpaid</span></h2>
+                                <span class="text-info"><%=teacherlist.length*10%>%</span>
                                 <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> <span class="sr-only">20% Complete</span> </div>
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=teacherlist.length*10%>%;"> <span class="sr-only"><%=teacherlist.length*10%>% Complete</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -291,10 +283,10 @@
                         <div class="analytics-sparkle-line table-mg-t-pro dk-res-t-pro-30">
                             <div class="analytics-content">
                                 <h5>Courses</h5>
-                                <h2><span class="counter">402</span> <span class="tuition-fees">Completed</span></h2>
-                                <span class="text-inverse">80%</span>
+                                <h2><span class="counter"><%=courlist.length%></span> <span class="tuition-fees">Completed</span></h2>
+                                <span class="text-inverse"><%=courlist.length/10%>%</span>
                                 <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">230% Complete</span> </div>
+                                    <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=courlist.length%>%;"> <span class="sr-only"><%=courlist.length%>% Complete</span> </div>
                                 </div>
                             </div>
                         </div>
