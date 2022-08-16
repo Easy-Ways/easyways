@@ -25,13 +25,16 @@ exports.save = (req,res)=>{
         }else{
             const user = new User({
                 name:req.body.name,
-                fullname:req.body.fullname,
+                Fullname:req.body.fullname,
                 subscription:req.body.subjects,
                 section:req.body.section,
+                phone:req.body.phone,
                 email:req.body.email,
                 type:'Teacher',
                 paymentcode:req.body.d17,
                 paymentac:'1',
+                facebook:req.body.facebook,
+                instagram:req.body.instagram,
             })
             
             user.save().then(()=>{

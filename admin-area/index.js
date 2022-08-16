@@ -12,6 +12,7 @@ const logout = require('./routers/logout');
 const cookieParser = require('cookie-parser');
 const student = require('./routers/allstudent');
 const prof = require('./routers/allprof');
+const addprof = require('./routers/addprof');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -49,11 +50,12 @@ app.use(cookieParser());
 app.use('/all-students',student);
 app.use('/all-professors',prof);
 app.use('/all-courses',course);
-app.use('/login',signin).listen(3000);
+app.use('/login',signin).listen(5000);
 app.use('/home',home);
 app.use('/sch-up',sch_up);
 app.use('/sub-up',sub_up);
 app.use('/uploader',uploader);
 app.use('/logout',logout);
+app.use('/add-professor',addprof);
 
 

@@ -24,6 +24,8 @@ const userSchema = mongoose.Schema({
     paymentac: {type :  Number ,default:0},
     paymentot:{type : Number,default:0},
     paymentcode:{type: String},
+    facebook:{type:String},
+    instagram:{type:String},
 });
 userSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('User', userSchema);

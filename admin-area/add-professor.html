@@ -872,79 +872,53 @@
                                                             <div class="row">
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
-                                                                        <input name="firstname" type="text" class="form-control" placeholder="Full Name">
+                                                                        <input name="name" type="text" class="form-control" placeholder="First Name">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <input name="address" type="text" class="form-control" placeholder="Address">
+                                                                        <input name="fullname" type="text" class="form-control" placeholder="Last Name">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <input name="mobileno" type="number" class="form-control" placeholder="Mobile no.">
+                                                                        <input name="email" type="email" class="form-control" placeholder="Email Address">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <input name="finish" id="finish" type="text" class="form-control" placeholder="Date of Birth">
+                                                                        <input name="phone" type="number" class="form-control" placeholder="Mobile no.">
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <input name="postcode" id="postcode" type="text" class="form-control" placeholder="Postcode">
-                                                                    </div>
-                                                                    <div class="form-group alert-up-pd">
-                                                                        <div class="dz-message needsclick download-custom">
-                                                                            <i class="fa fa-download edudropnone" aria-hidden="true"></i>
-                                                                            <h2 class="edudropnone">Drop image here or click to upload.</h2>
-                                                                            <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
-                                                                            </p>
-                                                                            <input name="imageico" class="hd-pro-img" type="text" />
-                                                                        </div>
-                                                                    </div>
+                                                                    
+                                                                    
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
-                                                                        <input name="department" type="text" class="form-control" placeholder="Department">
-                                                                    </div>
-                                                                    <div class="form-group res-mg-t-15">
-                                                                        <textarea name="description" placeholder="Description"></textarea>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <select name="gender" class="form-control">
-                                                                            <option value="none" selected="" disabled="">Select Gender</option>
-                                                                            <option value="0">Male</option>
-                                                                            <option value="1">Female</option>
+                                                                        <label>Subject : </label>
+                                                                        <select name="subjects" >
+                                                                            <option value="svt" >Svt</option>
+                                                                            <option value="Math">Math</option>
+                                                                            <option value="phy">Physique</option>
+                                                                            <option value="info">Informatique</option>
+                                                                            <option value="tech">Technique</option>
+                                                                            <option value="lett">Lettres</option>
+                                                                            <option value="eco">Economique et gestion</option>
+                                                                            <option value="eng">Englais</option>
+                                                                            <option value="fr">Francais</option>
                                                                         </select>
                                                                     </div>
+                                                                    
                                                                     <div class="form-group">
-                                                                        <select name="country" class="form-control">
-                                                                                <option value="none" selected="" disabled="">Select country</option>
-                                                                                <option value="0">India</option>
-                                                                                <option value="1">Pakistan</option>
-                                                                                <option value="2">Amerika</option>
-                                                                                <option value="3">China</option>
-                                                                                <option value="4">Dubai</option>
-                                                                                <option value="5">Nepal</option>
-                                                                            </select>
+                                                                        <label> Section :</label>
+                                                                        <select name="section" >
+                                                                            <option value="Bac-sc" >Bac Sciences</option>
+                                                                            <option value="Bac-Math">Bac Math</option>
+                                                                            <option value="Bac-tech">Bac Technique</option>
+                                                                            <option value="Bac-eco">Bac Economique et gestion</option>
+                                                                            <option value="Bac-sport">Bac Sport</option>
+                                                                            <option value="Mpi">MPI</option>
+                                                                            <option value="Pc">PC</option>
+                                                                            <option value="Mp">MP</option>
+                                                                        </select>
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <select name="state" class="form-control">
-                                                                                <option value="none" selected="" disabled="">Select state</option>
-                                                                                <option value="0">Gujarat</option>
-                                                                                <option value="1">Maharastra</option>
-                                                                                <option value="2">Rajastan</option>
-                                                                                <option value="3">Maharastra</option>
-                                                                                <option value="4">Rajastan</option>
-                                                                                <option value="5">Gujarat</option>
-                                                                            </select>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <select name="city" class="form-control">
-                                                                                <option value="none" selected="" disabled="">Select city</option>
-                                                                                <option value="0">Surat</option>
-                                                                                <option value="1">Baroda</option>
-                                                                                <option value="2">Navsari</option>
-                                                                                <option value="3">Baroda</option>
-                                                                                <option value="4">Surat</option>
-                                                                            </select>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <input name="website" type="text" class="form-control" placeholder="Website URL">
-                                                                    </div>
+                                                                    
+                                                                    
+                
+                                                                    
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -960,35 +934,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-tab-list tab-pane fade" id="reviews">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="review-content-section">
-                                                    <div class="row">
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                            <form id="acount-infor" action="#" class="acount-infor">
-                                                                <div class="devit-card-custom">
-                                                                    <div class="form-group">
-                                                                        <input type="text" class="form-control" name="email" placeholder="Email">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <input name="phoneno" type="number" class="form-control" placeholder="Phone">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <input name="password" type="password" class="form-control" placeholder="Password">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <input name="confarmpassword" type="password" class="form-control" placeholder="Confirm Password">
-                                                                    </div>
-                                                                    <a href="#" class="btn btn-primary waves-effect waves-light">Submit</a>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="product-tab-list tab-pane fade" id="INFORMATION">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -997,17 +943,13 @@
                                                         <div class="col-lg-12">
                                                             <div class="devit-card-custom">
                                                                 <div class="form-group">
-                                                                    <input type="url" class="form-control" placeholder="Facebook URL">
+                                                                    <input type="url" class="form-control" placeholder="Facebook URL" name="facebook" >
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type="url" class="form-control" placeholder="Twitter URL">
+                                                                    <input type="url" class="form-control" placeholder="Instagram URL" name="instagram">
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <input type="url" class="form-control" placeholder="Google Plus">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input type="url" class="form-control" placeholder="Linkedin URL">
-                                                                </div>
+                                                                
+                                                                
                                                                 <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
                                                             </div>
                                                         </div>
@@ -1081,7 +1023,7 @@
         <script src="js/form-validation/form-active.js"></script>
         <!-- dropzone JS
             ============================================ -->
-        <script src="js/dropzone/dropzone.js"></script>
+        
         <!-- tab JS
             ============================================ -->
         <script src="js/tab.js"></script>
