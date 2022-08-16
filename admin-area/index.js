@@ -13,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const student = require('./routers/allstudent');
 const prof = require('./routers/allprof');
 const addprof = require('./routers/addprof');
+
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));

@@ -45,7 +45,6 @@ exports.reminder = (req,res) => {
         }
       }
       Obj.save((err,upd) => {
-        
         res.redirect('/home');
       });
     }
