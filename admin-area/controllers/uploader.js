@@ -14,6 +14,7 @@ exports.upload = (req,res,next)=>{
             section : req.body.school,
             subject : req.body.subject,
             pdf: req.body.pdf,
+            type: req.body.type,
     });
     course.save()
     .then(()=>{
