@@ -2,30 +2,45 @@ const cookieparser = require('cookie-parser');
 const User = require('../data-schema/user');
 const Cour = require ('../data-schema/courses') ;
 const Note = require('../data-schema/note');
-exports.rendere = (req,res,next)=>{ 
-      var id =req.cookies.id;
-        if(id=='010101'){
-          User.find({type: 'Student' , paymentac: '0'}).then(
-            (users) => {
-              Note.findOne().then(
-                (notes) => {
-                  res.render('home-admin.html', {
-                    studentlist: users,
-                    notelist: notes,
-                    }); 
-                }
-              )
-            }).catch((error) => {
-                  console.log(error);
-                });
-                     }else{
-                      return res.redirect('/login');
-                     }
-     }
-     
+const Contact = require('../../data-schema/contact');
 
-    
-
+exports.rendere = (req,res,next) => {
+  var id = req.cookies.id;
+  if(id=='010101'){
+    Contact.find().then(
+      (contacts) => {
+        User.find({type: 'Student', paymentac:'1'}).then(
+          (users) => {
+            User.find({type: 'Teacher'}).then(
+              (profs) => {
+                Cour.find().then(
+                  (cours) => {
+                    Note.findOne().then(
+                      (notes) => {
+                        User.find({type: 'Student', paymentac:'0'}).then(
+                          (userr) => {
+                            res.render('home-admin.html', {
+                              contactlist: contacts,
+                              studentuser: users,
+                              teacherlist: profs,
+                              courlist: cours,
+                              notelist: notes,
+                              studentlist: userr,
+                            })
+                          }
+                        )
+                      }
+                    )
+                  }
+                )
+              }
+            )
+          }
+        )
+      }
+    )
+  }
+}
 exports.note = (req,res) => {
   Note.findOne( {} , (err, Obj) => {
     if(err) {

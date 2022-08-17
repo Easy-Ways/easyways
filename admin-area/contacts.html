@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admin Home || Easy-Ways</title>
+    <title>Contacts || Easy-Ways</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -117,7 +117,10 @@
                             </ul>
                         </li>
                         <li>
-                            <a  href="/contacts" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-sub-pro">Contacts</span></a>
+                            <a  href="" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Contacts</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                               
+                            </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="" aria-expanded="false"><i class="fa-solid fa-upload"></i> <span class="mini-click-non"> Uploaders</span></a>
@@ -216,139 +219,31 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-            <div class="breadcome-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form action="/search" role="search" class="sr-input-func" method="GET">
-                                                <input name="searchs" type="text" placeholder="Search..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="analytics-sparkle-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line reso-mg-b-30">
-                            <div class="analytics-content">
-                                <h5>Contacts</h5>
-                                <h2><span class="counter"><%=contactlist.length%></span> <span class="tuition-fees">Need Help</span></h2>
-                                <span class="text-success"><%=100-contactlist.length*10%>%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=100-contactlist.length*10%>%;"> <span class="sr-only"><%=100-contactlist.length*10%>% Complete</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line reso-mg-b-30">
-                            <div class="analytics-content">
-                                <h5>Students</h5>
-                                <h2><span class="counter"><%=studentuser.length%></span> <span class="tuition-fees">Paid</span></h2>
-                                <span class="text-danger"><%=studentuser.length/10%>%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=studentuser.length/10%>%;"> <span class="sr-only"><%=studentuser.length/10%>% Complete</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line reso-mg-b-30 table-mg-t-pro dk-res-t-pro-30">
-                            <div class="analytics-content">
-                                <h5>Teachers</h5>
-                                <h2><span class="counter"><%=teacherlist.length%></span> <span class="tuition-fees">Unpaid</span></h2>
-                                <span class="text-info"><%=teacherlist.length*10%>%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=teacherlist.length*10%>%;"> <span class="sr-only"><%=teacherlist.length*10%>% Complete</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line table-mg-t-pro dk-res-t-pro-30">
-                            <div class="analytics-content">
-                                <h5>Courses</h5>
-                                <h2><span class="counter"><%=courlist.length%></span> <span class="tuition-fees">Completed</span></h2>
-                                <span class="text-inverse"><%=courlist.length/10%>%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%=courlist.length%>%;"> <span class="sr-only"><%=courlist.length%>% Complete</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div style="margin-left:18px ;" class="row">
-            <div class="col-12">
-                <h2 class="contact-title">Notes</h2>
-            </div>
+        <div style="margin-left:25px ; margin-top: 85px; " class="row">
+            <div class="white-box res-mg-t-30 table-mg-t-pro-n" style="margin-bottom: 10px; margin-right: 15px;">
+                <h1 style="margin-left: 15px;text-transform: capitalize;">Our Contacts</h1>
+                <p>If you don't know what to answer call a manager!</p>
+             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="/home" method="POST" >
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="form-group">
-                                <textarea class="form-control w-100" name="message" id="easy" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = '<%=notelist.name%>(<%=notelist.department%>): <%=notelist.message%>'" placeholder="<%=notelist.name%>(<%=notelist.department%>): <%=notelist.message%>"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input class="form-control valid" name="name" id="easy" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '<%=notelist.name%>'" placeholder="<%=notelist.name%>">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input class="form-control valid" name="department" id="easy" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '<%=notelist.department%>'" placeholder="<%=notelist.department%>">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-group">
-                                <input class="form-control" name="subject" id="easy" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '<%=notelist.subject%>'" placeholder="<%=notelist.subject%>">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <button type="submit" class="button button-contactForm boxed-btn">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <br>
-        <div class="contacts-area mg-b-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <h2 style="margin-left:15px ;">Unpaid Students</h2>
-                    <p style="margin-left:30px ;">Don't forget to activate paid ones.</p>
-                    <%studentlist.forEach(users => {%>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30">
-                            <div class="student-img">
-                                <img src="img/student/2.jpg" alt="" />
-                            </div>
-                            <div class="student-dtl">
-                                <h2><%=users.Fullname%> <%=users.name%></h2>
-                                <p class="dp"><%=users.section%></p>
-                                <p class="dp-ag">GSM: +216<%=users.phone%></p>
-                                <p class="dp-ag"><b>Class:</b> <%=users.class%></p>
-                                <p class="dp-ag"><b>Payment:</b> <%=users.paymentot%> TND</p>
-                            </div>
-                        </div>
+                <form class="form-contact contact_form" action="/contacts" method="GET" >
+                    <%contactlist.forEach(c => {%>
+                    <div class="white-box res-mg-t-30 table-mg-t-pro-n" style="margin-bottom: 10px; margin-right: 15px; margin-left: -15px;">
+                        <h2 style="text-transform: capitalize; color: rgb(18, 126, 175); font-size: 25px; ">From <%=c.name%></h2>
+                        <h3 style="color: rgb(112, 9, 116); margin-left: 20px;">Subject: </h3>
+                        <p style="margin-left:40px ;"><%=c.subject%>.</p>
+                        <h3 style="color: rgb(112, 9, 116); margin-left: 20px;">message: </h3>
+                        <p style="margin-left:40px ;"><%=c.message%>.</p>
+                        <div class="form-group">
+                            <textarea class="form-control w-100" name="message" id="easy" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Answer..'" placeholder="Answer.."></textarea>
+                        </div>   
+                        <form method="POST" action="/answer">
+                            <input type="hidden" value="" name="sid">
+                            <button class="btn btn-primary" type="submit">Send</button>
+                        </form>
                     </div>
                     <%})%>
-                </div>
+                </form>
             </div>
         </div>
     </div>

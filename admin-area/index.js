@@ -13,6 +13,8 @@ const cookieParser = require('cookie-parser');
 const student = require('./routers/allstudent');
 const prof = require('./routers/allprof');
 const addprof = require('./routers/addprof');
+const search = require('./routers/search');
+const contact = require('./routers/contact');
 
 //prereq
 app.use(express.json());
@@ -58,5 +60,7 @@ app.use('/sub-up',sub_up);
 app.use('/uploader',uploader);
 app.use('/logout',logout);
 app.use('/add-professor',addprof);
+app.use('/search', search);
+app.use('/contacts', contact);
 
 
