@@ -15,6 +15,7 @@ const prof = require('./routers/allprof');
 const addprof = require('./routers/addprof');
 const search = require('./routers/search');
 const contact = require('./routers/contact');
+const notuploader = require('./routers/notuploader');
 
 //prereq
 app.use(express.json());
@@ -62,5 +63,6 @@ app.use('/logout',logout);
 app.use('/add-professor',addprof);
 app.use('/search', search);
 app.use('/contacts', contact);
+app.use('/notuploader', notuploader);
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Course uploader</title>
+    <title>Notification uploader</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -122,7 +122,6 @@
                             <a class="has-arrow" href="" aria-expanded="false"><i class="fa-solid fa-upload"></i> <span class="mini-click-non"> Uploaders</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Professors" href="/uploader"><span class="mini-sub-pro">Courses Uploader</span></a></li>
-                                <li><a title="All Professors" href="/notuploader"><span class="mini-sub-pro">Notification Uploader</span></a></li>
                                 <li><a title="Add Professor" href="/sch-up"><span class="mini-sub-pro">Schedule Uploader</span></a></li>
                                 <li><a title="Add Professor" href="/sub-up"><span class="mini-sub-pro">Subscription Uploader</span></a></li>
                                
@@ -247,8 +246,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-payment-inner-st">
                             <ul id="myTabedu1" class="tab-review-design">
-                                <li class="active"><a cursor="disabled">Courses Details</a></li>
-                                <h2 style="color:green; margin-top: 25px;"><%=message%></h2>
+                                <li class="active"><a cursor="disabled">Notification Details</a></li>
+                                <h2 style="color:green;margin-top: 25px;"><%=message%></h2>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
                                 <div class="product-tab-list tab-pane fade active in" id="description">
@@ -260,45 +259,24 @@
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <input name="name" type="text" class="form-control" placeholder="Course Name">
+                                                                    <input name="title" type="text" class="form-control" placeholder="Note Title">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input name="teacher"  type="text" class="form-control" placeholder="Teacher name">
+                                                                    <input name="time"  type="text" class="form-control" placeholder="Note Time">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input name="hours" type="number" min="1" max="25" class="form-control" placeholder="Course Duration (Hours)">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input name="image" type="text" class="form-control" placeholder="Image Link">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input name="pdf" type="file" class="form-control" placeholder="Hot el fichier nayk">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label >Difficulty:</label>
-                                                                    <br>
-                                                                <select name="diff"  >
-                                                                <option value="easy">Easy</option>
-                                                                <option value="mid">Mid</option>
-                                                                <option value="hard">Hard</option>
-                                                                <option value="extreme">Extreme</option>
-                                                                </select>
+                                                                    <input name="message" type="text" class="form-control" placeholder="Note Message">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <label>Subject :</label>
+                                                                    <label>class :</label>
                                                                     <br>
-                                                                    <select name="subject" >
-                                                                        <option value="svt" >Svt</option>
-                                                                        <option value="Math">Math</option>
-                                                                        <option value="phy">Physique</option>
-                                                                        <option value="info">Informatique</option>
-                                                                        <option value="tech">Technique</option>
-                                                                        <option value="lett">Lettres</option>
-                                                                        <option value="eco">Economique et gestion</option>
-                                                                        <option value="eng">Englais</option>
-                                                                        <option value="fr">Francais</option>
+                                                                    <select name="class" >
+                                                                        <option value="A1" >A1</option>
+                                                                        <option value="A2" >A2</option>
+                                                                        <option value="A3" >A3</option>
+                                                                        <option value="A4" >A4</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group res-mg-t-15">
@@ -313,16 +291,6 @@
                                                                         <option value="Bac-sport">Bac Sport</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="form-group res-mg-t-15">
-                                                                    <label >Type :</label>
-                                                                   <br>
-                                                                   <select name="type" >
-                                                                       <option value="cour" >Cour</option>
-                                                                       <option value="method">Method</option>
-                                                                       <option value="exercice">Exercice</option>
-                                                                       <option value="devoir">Devoir</option>
-                                                                   </select>
-                                                               </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
