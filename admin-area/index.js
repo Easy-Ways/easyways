@@ -16,7 +16,7 @@ const addprof = require('./routers/addprof');
 const search = require('./routers/search');
 const contact = require('./routers/contact');
 const notuploader = require('./routers/notuploader');
-
+const cup = require('./routers/cupdate');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -30,6 +30,7 @@ app.use(express.static(__dirname+'./student/css'));  //dont fucking touch me
 app.use(express.static(__dirname+'./assets/css/'));   
 app.use('/admin',express.static(__dirname+ '/admin-area'));
 app.use('/admin',express.static(__dirname+'./admin-area/css/'));
+
 //dont fucking touch me 
 //dont fucking touch me //dont fucking touch me //dont fucking touch me 
 app.use((req, res, next) => {
@@ -64,5 +65,6 @@ app.use('/add-professor',addprof);
 app.use('/search', search);
 app.use('/contacts', contact);
 app.use('/notuploader', notuploader);
+app.use('/class-update',cup);
 
 
