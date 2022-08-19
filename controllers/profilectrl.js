@@ -39,6 +39,7 @@ exports.rendere = (req,res,next) => {
           if(req.body.mobile) {
             obb.phone = req.body.mobile;
           }
+          obb.activation ='0';
         }
         obb.save(() => {
           
