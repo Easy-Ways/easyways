@@ -2,6 +2,7 @@ const cookieParser = require('cookie-parser');
 const user = require('../data-schema/user');
 const notification = require('../data-schema/notification');
 var id;
+const nodemailer = require('nodemailer');
 exports.rendere = (req,res,next) => {
      id = req.cookies.id;
     if(!id){
@@ -40,7 +41,34 @@ exports.rendere = (req,res,next) => {
         }
         obb.save(() => {
           
-          res.redirect('/Profile');
+          let transporter = nodemailer.createTransport({
+            host:'mail.easy-ways.tn',
+            port: 587,
+            auth: {
+              user:'support@easy-ways.tn',
+              pass:'01-Easyways-01',
+            },
+            tls: {
+              // do not fail on invalid certs
+              rejectUnauthorized: false,
+            },
+
+          });
+          var htmlstream =fs.readFile("confirmtmp.html", 'utf8', function (err, data) {
+            var link = "http://localhost:4000/activate-acc?id=" + id;
+           data = data.replace(/{{link}}/,link);
+           let info = ({
+            from: ' support@easy-ways.tn', // sender address
+            to: obb.email, // list of receivers
+            subject: "Hello ✔", // Subject line
+            text: "", // plain text body
+            html: data, // plain text body
+          });
+          transporter.sendMail(info,()=>{
+          
+            res.redirect('/profile');
+          }) 
+        });
         });
       }
     });
