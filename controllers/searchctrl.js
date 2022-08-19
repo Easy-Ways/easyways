@@ -15,7 +15,7 @@ exports.search = (req,res,next) => {
                     res.render('Courses.html',{
                         courlist: cours,
                         studentuser: User,
-                        noteuser: nots,
+                        notuser: nots,
                       });
                 }
                     

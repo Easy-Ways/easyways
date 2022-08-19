@@ -300,35 +300,15 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-            <div class="breadcome-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list single-page-breadcome">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form role="search" class="sr-input-func">
-                                                <input type="text" placeholder="Search..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="product-status mg-b-15">
+        <div style="margin-top: 80px;" class="product-status mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap drp-lst">
                             <h4 style="color:red ;">Schedule</h4>
                             <div class="add-product">
-                                <a>06 August 2022</a>
+                                <a id="day"></a>
                             </div>
                             <div class="asset-inner">
                                 <table>
@@ -458,6 +438,18 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+
+    <script> 
+        const d = new Date();
+        const year = d.getFullYear();
+        const month = d.getMonth();
+        const date = d.getDate();
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+        document.getElementById("day").innerHTML= date + ' ' + monthNames[month] + ' ' + year;
+    </script>
 </body>
 
 </html>
