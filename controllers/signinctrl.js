@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const { URLSearchParams } = require('url');
 const cookieparser = require('cookie-parser');
 exports.signin = (req,res,next)=>{
-   user.findOne({ email: req.body.email }).then(
+   user.findOne({ email: req.body.email, type:'Student' }).then(
       (User) => {
         if (!User) {
           return res.status(401).render('login.html',{
@@ -12,7 +12,14 @@ exports.signin = (req,res,next)=>{
           });
           
         }
-        if(User.paymentac==0){
+        if (!User.section || !User.subscription ) {
+          User.delete();
+            return res.status(401).render('login.html',{
+              message: "User Does Not Exist"
+            });
+          
+        }
+        if(User.paymentac==0 || !User.paymentcode ){
           return res.render('login.html',{
             message:'Account Payment still in progress!'
           })

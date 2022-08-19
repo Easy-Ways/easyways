@@ -26,6 +26,19 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <script>
+        function match(){
+            var pw1 = document.getElementById('pass').value;
+            var pw2 = document.getElementById('cpass').value;
+            if(pw1!=pw2){
+                document.getElementById('vmsg').style.color="red";
+                document.getElementById('vmsg').innerHTML="Passwords Does Not Match";
+            }else{
+                document.getElementById('vmsg').innerHTML="Passwords match!";
+                document.getElementById('vmsg').style.color="green";
+            }
+        }
+    </script>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -66,11 +79,12 @@
             </div>
             <div class="form-input">
                 <label for="name">Password</label>
-                <input type="password" name="password" placeholder="Enter your Password.." required>
+                <input type="password" name="password" id="pass" placeholder="Enter your Password.." required onblur="match();">
             </div>
             <div class="form-input">
                 <label for="name">Confirm Your Password</label>
-                <input type="password" name="cpassword" placeholder="Confirm Password.." required>
+                <input type="password" name="cpassword" id="cpass" placeholder="Confirm Password.." required onblur="match();" onclick>
+                <h3 id="vmsg"></h3>
             </div>
             <div class="form-input">
                 <label for="name">Phone Number</label>
