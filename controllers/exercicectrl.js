@@ -25,7 +25,7 @@ exports.rendere = (req,res,next) => {
                 res.render('Exercices.html', {
                     studentuser: User,
                     courlist: exercice,
-                    noteuser: nots,
+                    notuser: nots,
                   });
               })
             }
