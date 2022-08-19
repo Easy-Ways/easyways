@@ -44,7 +44,7 @@ exports.save =(req,res) =>{
        // plain text body
     });
     transporter.sendMail(info,()=>{
-      Contact.deleteOne({_id:cid});
+      Contact.findOneAndDelete({_id:cid});
       res.render('contacts.html',{
         contactlist: cont,
         message:'Message Sent !',
