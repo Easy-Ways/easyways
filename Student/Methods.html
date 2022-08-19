@@ -181,28 +181,35 @@
                                                                 <h1>Notifications</h1>
                                                             </div>
                                                             <ul class="notification-menu">
+                                                                <%notuser.forEach(not => {%>
                                                                 <li>
                                                                     <a href="#">
+                                                                        
                                                                         <div class="notification-icon">
+                                                                            <span class="notification-date" ><%=not.time%></span>
                                                                             <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
                                                                         </div>
                                                                         <div class="notification-content">
-                                                                            <span class="notification-date">16 Sept</span>
-                                                                            <h2>Advanda Cro</h2>
-                                                                            <p>Please done this project as soon possible.</p>
+                                                                            
+                                                                            <h2><%=not.titre%></h2>
+                                                                            <p><%=not.message%>.</p>
+                                                                           
                                                                         </div>
                                                                     </a>
                                                                 </li>
+                                                                <%})%>
+                                                                
                                                             </ul>
                                                             <div class="notification-view">
                                                                 <a href="#">View All Notification</a>
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                     <li class="nav-item">
                                                         <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                                 <img src="img/product/pro4.jpg" alt="" />
-                                                                <span class="admin-name">Abbes Salmen</span>
+                                                                <span class="admin-name"><%=studentuser.Fullname%> <%=studentuser.name%></span>
                                                                 <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                             </a>
                                                         <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">

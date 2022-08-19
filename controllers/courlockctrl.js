@@ -1,6 +1,7 @@
 const Cour = require('../data-schema/courses');
 const cookieParser = require('cookie-parser');
 const user = require('../data-schema/user');
+const Notif = require('../data-schema/notification');
 var id;
 var url = require('url');
 var urll="xx";
@@ -19,12 +20,13 @@ exports.rendere = (req,res,next) => {
                     section: User.section
         }).then(
             (resume) => {
-                User.last_cour = nome;
-                User.save();
+              Notif.find({class: User.class}).then((nots)=>{
                 res.render('OurCour.html', {
                     studentuser: User,
                     resumeuser: resume,
+                    notuser: nots,
                   });
+              })
             }
           )
     })
