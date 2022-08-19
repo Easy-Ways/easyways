@@ -44,11 +44,13 @@ exports.save =(req,res) =>{
        // plain text body
     });
     transporter.sendMail(info,()=>{
-      Contact.findOneAndDelete({_id:cid});
-      res.render('contacts.html',{
-        contactlist: cont,
-        message:'Message Sent !',
-    })
+      Contact.findByIdAndDelete(cid).then(()=>{
+        res.render('contacts.html',{
+          contactlist: cont,
+          message:'Message Sent !',
+      })
+      })
+      
     })
       
     })
