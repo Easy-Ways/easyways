@@ -2,6 +2,7 @@ const cookieParser = require('cookie-parser');
 const user = require('../data-schema/user');
 const notification = require('../data-schema/notification');
 var id;
+const fs = require('fs');
 const nodemailer = require('nodemailer');
 exports.rendere = (req,res,next) => {
      id = req.cookies.id;
