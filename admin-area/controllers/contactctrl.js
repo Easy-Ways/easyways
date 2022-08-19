@@ -21,33 +21,36 @@ exports.rendere = (req,res,next) => {
   }
 exports.save =(req,res) =>{
     var cid = req.body.id;
-  /*  nodemailer.createTransport({
-        host: "smtp.example.com",
+    Contact.findById(cid).then((contact)=>{
+      let transporter = nodemailer.createTransport({
+        host:'mail.easy-ways.tn',
         port: 587,
-        secure: false, // upgrade later with STARTTLS
         auth: {
-          user: "username",
-          pass: "password",
+          user:'support@easy-ways.tn',
+          pass:'01-Easyways-01',
         },
+        tls: {
+          // do not fail on invalid certs
+          rejectUnauthorized: false,
+        },
+  
       });
-      
-let info = ({
-    from: ' academy.easyways@gmail.com', // sender address
-    to: User.email, // list of receivers
-    subject: "Hello ✔ Reset your password", // Subject line
-    text: "", // plain text body
-    html: data, // plain text body
-  });
-  transporter.sendMail(info,()=>{
-              
-    res.render('forgetpass.html',{
-      message:'Please Check your mail'
+        
+  let info = ({
+      from: ' support@easy-ways.tn', // sender address
+      to: contact.email, // list of receivers
+      subject: contact.subject, // Subject line
+      text: req.body.message, // plain text body
+       // plain text body
     });
-  })*/
-    Contact.findOneAndDelete({_id:cid}).then(()=>{
-        res.render('contacts.html',{
-            contactlist: cont,
-            message:'Message Sent !',
-        })
+    transporter.sendMail(info,()=>{
+      Contact.deleteOne({_id:cid});
+      res.render('contacts.html',{
+        contactlist: cont,
+        message:'Message Sent !',
     })
+    })
+      
+    })
+    
 }

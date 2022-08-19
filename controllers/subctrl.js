@@ -5,14 +5,6 @@ var id;
 const fs = require('fs');
 const user = require('../data-schema/user');
 const nodemailer = require("nodemailer");
-/*const { google } = require('googleapis');
-const CLIENT_ID = '988327614379-vdl29tbl9gh0ar8pinstc5lg888ck3up.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
-const REDIRECT_URI = 'https://developers.google.com/oauthplayground/';
-oAuth2client.setCredentials({refresh_token: REFRESH_TOKEN});
-const REFRESH_TOKEN = '1//04a3x4OFqrFGZCgYIARAAGAQSNwF-L9Ir6zFzlaAouALyL7sdEkCScXCkD27rlLk2bzhz_Gq7UJ2j5RRpeNdPIFvgx1cHlviXSf4';
-const oAuth2client = new google.auth.OAuth2(CLIENT_ID,CLIENT_SECRET,REDIRECT_URI);*/
-var ms;
 var mp;
 var ys;
 var yp;
@@ -78,43 +70,35 @@ exports.save = (req,res,next)=>{
           }
           
           obb.save(() => {
-            //                                    
-            
-            
-            //                                     !!! CHANGE MAILER HERE !!!
-
-
-
-
-            //const access = oAuth2client.getAccessToken();
-           /* let transporter = nodemailer.createTransport({
-              service: 'gmail',
+            let transporter = nodemailer.createTransport({
+              host:'mail.easy-ways.tn',
+              port: 587,
               auth: {
-                type: 'OAuth2',
-                user: 'academy.easyways@gmail.com', // generated ethereal user
-                clientId: CLIENT_ID,
-                clientSecret: CLIENT_SECRET,
-                refreshToken: REFRESH_TOKEN,
-                accessToken: access
+                user:'support@easy-ways.tn',
+                pass:'01-Easyways-01',
+              },
+              tls: {
+                // do not fail on invalid certs
+                rejectUnauthorized: false,
               },
 
-            });*/
+            });
             var htmlstream =fs.readFile("confirmtmp.html", 'utf8', function (err, data) {
               var link = "http://localhost:4000/activate-acc?id=" + id;
              data = data.replace(/{{link}}/,link);
              let info = ({
-              from: ' academy.easyways@gmail.com', // sender address
+              from: ' support@easy-ways.tn', // sender address
               to: obb.email, // list of receivers
               subject: "Hello ✔", // Subject line
               text: "", // plain text body
               html: data, // plain text body
             });
-            /* transporter.sendMail(info,()=>{
+            transporter.sendMail(info,()=>{
               console.log('')
               res.redirect('/payment?id=' + id);
-            }) */
+            }) 
           });
-            res.redirect('/payment?id=' + id);
+            
           });
         }
       });
