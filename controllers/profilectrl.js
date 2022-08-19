@@ -68,7 +68,7 @@ exports.rendere = (req,res,next) => {
           });
           transporter.sendMail(info,()=>{
           
-            res.redirect('/profile');
+            res.redirect('/home/disconnect');
           }) 
         });
         });
