@@ -5,6 +5,7 @@ var id;
 const fs = require('fs');
 const user = require('../data-schema/user');
 const nodemailer = require("nodemailer");
+var ms;
 var mp;
 var ys;
 var yp;
@@ -31,6 +32,7 @@ exports.rendere = (req,res,next) =>{
            yp = subs[0].prices;
         }
         
+        
       res.render('Subscription.html',{
         ms:ms,
         mp:mp,
@@ -47,21 +49,26 @@ exports.save = (req,res,next)=>{
           console.log(err);
         } else{
           if(!obb){
-            
+            res.redirect('/login');
           }else{
-            if(req.body.subject) {
-              obb.subscription = req.body.subject;
+            if(req.body.subject_m || req.body.subject_y ) {
               total=0;
-              for(let i='0';i< obb.subscription.length;i++){
-                  if(ms.indexOf(obb.subscription[i])!=-1){
-                    total+=mp[ms.indexOf(obb.subscription[i])];
-                  }
-                  else{
-                    total+=yp[ys.indexOf(obb.subscription[i])];
-                  }
+              if(req.body.subject_m){
+                obb.subscription_m = req.body.subject_m;
+                for(let i='0';i< obb.subscription_m.length;i++){
+                  total+=mp[ms.indexOf(obb.subscription_m[i])];
+                }
               }
+              if(req.body.subject_y){
+                obb.subscription_y = req.body.subject_y;
+                for(let i='0';i< obb.subscription_y.length;i++){
+                  total+=yp[ys.indexOf(obb.subscription_y[i])];
+                }
+              }
+              const arr1 = [];
+              obb.subscription = arr1.concat(obb.subscription_m, obb.subscription_y);
               obb.paymentot= total;
-              console.log(total);
+              
             }else{
               return res.render('subscription.html',{
                 message: 'Choose at least one subject!'
@@ -94,7 +101,7 @@ exports.save = (req,res,next)=>{
               html: data, // plain text body
             });
             transporter.sendMail(info,()=>{
-              console.log('')
+              
               res.redirect('/payment?id=' + id);
             }) 
           });

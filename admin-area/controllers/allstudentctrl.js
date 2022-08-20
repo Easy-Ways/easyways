@@ -2,6 +2,7 @@ const User = require('../data-schema/user');
 const cookieParser = require('cookie-parser');
 var id;
 var url = require('url');
+const { findOneAndDelete } = require('../data-schema/user');
 var urll="xx";
 var userlist;
 exports.rendere = (req,res,next) => {
@@ -12,7 +13,6 @@ exports.rendere = (req,res,next) => {
     User.find({type:'Student'}).then((users)=>{
         userlist=users;
         res.render('all-students.html',{
-
             studentlist:userlist,
             m:''
         })
@@ -31,3 +31,4 @@ exports.save = (req,res)=>{
         })
     })
 }
+

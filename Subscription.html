@@ -66,7 +66,7 @@
                             data-html="true"
                             data-placement="left"
                             data-container="body"
-                            data-content="<%for(let i =0; i< ms.length;i++){%><p style='font-size:large;'><%=ms[i]%> : <%=mp[i]%> <%}%></p>" >
+                            data-content="<%for(let i =0; i< ms.length;i++){%><p style='font-size:large;'><%=ms[i]%> : <%=mp[i]%> DT <%}%></p>" >
                                 <div class="panel  panel-pricing">
                                     <div class="panel-heading panel-violet">
                                         
@@ -78,7 +78,7 @@
                                     <ul class="list-group text-center">
                                         <%for(let i =0; i< ms.length;i++){%>
                                         <li class="list-group-item"></i>
-                                            <input type="checkbox" name="subject" value="<%=ms[i]%>">
+                                            <input type="checkbox" name="subject_m" value="<%=ms[i]%>">
                                             <label class="subject" style="font-size:large;"><%=ms[i]%></label>
                                             
                                         </li>
@@ -94,7 +94,7 @@
                             data-placement="right" title="<p style='font-size:large;'>Detailed Prices:</p>"
                             data-trigger="hover"
                             data-html="true"
-                            data-content="<%for(let i =0; i< ys.length;i++){%><p style='font-size:large;'><%=ys[i]%> : <%=yp[i]%> <%}%></p>" >
+                            data-content="<%for(let i =0; i< ys.length;i++){%><p style='font-size:large;'><%=ys[i]%> : <%=yp[i]%> DT <%}%></p>" >
                                 <div class="panel  panel-pricing">
                                     <div class="panel-heading panel-blue">
                                         
@@ -106,7 +106,7 @@
                                     <ul class="list-group text-center">
                                         <%for(let i =0; i< ys.length;i++){%>
                                         <li class="list-group-item"></i>
-                                            <input type="checkbox" name="subject" value="<%=ys[i]%>">
+                                            <input type="checkbox" name="subject_y" value="<%=ys[i]%>">
                                             <label class="subject" style="font-size:large;"><%=ys[i]%></label>
                                         </li>
                                         <%}%>

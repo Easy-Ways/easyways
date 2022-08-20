@@ -17,6 +17,8 @@ const search = require('./routers/search');
 const contact = require('./routers/contact');
 const notuploader = require('./routers/notuploader');
 const cup = require('./routers/cupdate');
+const editstudent = require('./routers/editstudent');
+
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -53,6 +55,7 @@ app.use(bodyparser.json());
 app.use(cookieParser());
 //renders
 app.use('/all-students',student);
+app.use('/edit-students', editstudent);
 app.use('/all-professors',prof);
 app.use('/all-courses',course);
 app.use('/login',signin).listen(5000);
@@ -66,5 +69,6 @@ app.use('/search', search);
 app.use('/contacts', contact);
 app.use('/notuploader', notuploader);
 app.use('/class-update',cup);
+
 
 
