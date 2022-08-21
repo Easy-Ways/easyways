@@ -51,24 +51,38 @@ exports.save = (req,res,next)=>{
           if(!obb){
             res.redirect('/login');
           }else{
+            const d = new Date();
+              var year = d.getFullYear();
+              const month = d.getMonth();
+              const date = d.getDate();
+              const monthNames = ["January", "February", "March", "April", "May", "June",
+                                    "July", "August", "September", "October", "November", "December"
+                                  ];
+             
+              
             if(req.body.subject_m || req.body.subject_y ) {
               total=0;
               if(req.body.subject_m){
+                var m_end = date + ' ' + monthNames[month+1] + ' ' + year;
                 obb.subscription_m = req.body.subject_m;
                 for(let i='0';i< obb.subscription_m.length;i++){
                   total+=mp[ms.indexOf(obb.subscription_m[i])];
+                  obb.m_end[i]=m_end;
                 }
               }
               if(req.body.subject_y){
                 obb.subscription_y = req.body.subject_y;
+                year+=1;
+                var y_end = date + ' ' + monthNames[month] + ' ' + year;
                 for(let i='0';i< obb.subscription_y.length;i++){
                   total+=yp[ys.indexOf(obb.subscription_y[i])];
+                  obb.y_end[i]=y_end;
                 }
               }
               const arr1 = [];
               obb.subscription = arr1.concat(obb.subscription_m, obb.subscription_y);
               obb.paymentot= total;
-              
+              console.log('monthly:',obb.m_end,'yearly:',obb.y_end);
             }else{
               return res.render('subscription.html',{
                 message: 'Choose at least one subject!'
