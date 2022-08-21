@@ -351,7 +351,7 @@
                                                                 <div class="student-dtl">
                                                                     <h2>Monthly Subscription:</h2>
                                                                     <%for(var i=0; i < users.subscription_m.length ; i++){%>
-                                                                        <p class="dp-ag"><b>S<%=i%>:</b> <%=users.subscription_m[i]%></p>
+                                                                        <p class="dp-ag"><b>S<%=i%>:</b> <%=users.subscription_m[i]%> Ends on : <%=users.m_end[i]%></p>
                                                                         <form method="POST" action="/edit-students/sub">
                                                                             <input type="hidden" value="<%=i%>" name="i">
                                                                             <input type="hidden" value="<%=users.subscription_m[i]%>" name="sub_m">
@@ -363,7 +363,7 @@
                                                                 <div class="student-dtl">
                                                                     <h2>Yearly Subscription:</h2>
                                                                     <%for(var i=0; i < users.subscription_y.length ; i++){%>
-                                                                        <p class="dp-ag"><b>S<%=i%>:</b> <%=users.subscription_y[i]%></p>
+                                                                        <p class="dp-ag"><b>S<%=i%>:</b> <%=users.subscription_y[i]%> Ends on : <%=users.y_end[i]%></p>
                                                                         <form method="POST" action="/edit-students/sub">
                                                                             <input type="hidden" value="<%=i%>" name="i">
                                                                             <input type="hidden" value="<%=users.subscription_y[i]%>" name="sub_y">
