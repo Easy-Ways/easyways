@@ -18,6 +18,7 @@ const contact = require('./routers/contact');
 const notuploader = require('./routers/notuploader');
 const cup = require('./routers/cupdate');
 const editstudent = require('./routers/editstudent');
+const notes = require('./routers/notes');
 
 //prereq
 app.use(express.json());
@@ -69,6 +70,7 @@ app.use('/search', search);
 app.use('/contacts', contact);
 app.use('/notuploader', notuploader);
 app.use('/class-update',cup);
+app.use('/notes',notes);
 
 
 

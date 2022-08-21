@@ -281,7 +281,9 @@
                                 <h3 style="color:green"><%=message%></h3>
                                 <ul id="myTabedu1" class="tab-review-design">
                                     <li class="active"><a href="#description">Class Uploader</a></li>
-                                    <li><a href="#INFORMATION">Activation</a></li>
+                                    <%if( users.paymentac == 0 ){%>
+                                        <li><a href="#INFORMATION">Activation</a></li>
+                                    <%}%>
                                     <li><a href="#EDIT">Edit Subscription</a></li>
                                     <li><a href="#ADD">Add Subscription</a></li>
                                 </ul>
@@ -313,30 +315,32 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-tab-list tab-pane fade" id="INFORMATION">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="review-content-section">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="devit-card-custom">
-                                                                <div class="student-dtl">
-                                                                    <h2><%=users.Fullname%> <%=users.name%></h2>
-                                                                    <p class="dp"><%=users.email%></p>
-                                                                    <p class="dp-ag">GSM: +216<%=users.phone%></p>
-                                                                    <br>
-                                                                <form method="POST" action="/edit-students/activate">
-                                                                    <input type="hidden" value="<%=users._id%>" name="sid">
-                                                                    <button class="btn btn-primary" type="submit">Activation</button>
-                                                                </form>
-                                                            </div>
+                                    <%if( users.paymentac == 0 ){%>
+                                        <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="review-content-section">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="devit-card-custom">
+                                                                    <div class="student-dtl">
+                                                                        <h2><%=users.Fullname%> <%=users.name%></h2>
+                                                                        <p class="dp"><%=users.email%></p>
+                                                                        <p class="dp-ag">GSM: +216<%=users.phone%></p>
+                                                                        <br>
+                                                                    <form method="POST" action="/edit-students/activate">
+                                                                        <input type="hidden" value="<%=users._id%>" name="sid">
+                                                                        <button class="btn btn-primary" type="submit">Activation</button>
+                                                                    </form>
+                                                                </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    <%}%>
                                     <div class="product-tab-list tab-pane fade" id="EDIT">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
