@@ -20,6 +20,8 @@ exports.rendere = (req,res,next) => {
                     section: User.section
         }).then(
             (resume) => {
+              User.last_cour = resume.name;
+              User.save();
               Notif.find({class: User.class}).then((nots)=>{
                 res.render('OurCour.html', {
                     studentuser: User,
