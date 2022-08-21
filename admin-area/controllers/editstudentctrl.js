@@ -22,6 +22,7 @@ exports.rendere = (req,res) =>{
     if(id=='010101'){
         User.findById(sid).then(
             (userr) => {
+                users=userr;
                 Subscription.find({section: userr.section}).then(
                     (subs) => {
                         if(subs[0].duration=='monthly'){
@@ -84,6 +85,9 @@ exports.sub = (req,res) => {
                     if(err){
                         console.error(err)
                     }
+                    obb.updateOne({
+                        $push: { unpaid: sub_m }
+                    })
                     res.redirect('/edit-students?id=' + sid );
                 }
         )
@@ -96,6 +100,11 @@ exports.sub = (req,res) => {
                     if(err){
                         console.error(err)
                     }
+                    obb.updateOne({
+                        $push: { unpaid: sub_y }
+                    }).then(()=>{
+                        console.log('succ')
+                    })
                     res.redirect('/edit-students?id=' + sid );
                 }
         )
@@ -113,7 +122,7 @@ exports.add = (req,res) =>{
                     if(err){
                         console.error(err)
                     }
-                    res.redirect('/edit-students?id=' + sid );
+                    
                 }
             )
         }
@@ -125,8 +134,9 @@ exports.add = (req,res) =>{
                     if(err){
                         console.error(err)
                     }
-                    res.redirect('/edit-students?id=' + sid );
+                    
                 }
         )
     }
+    res.redirect('/edit-students?id=' + sid );
 }

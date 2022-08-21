@@ -1,6 +1,7 @@
 const cookieParser = require('cookie-parser');
 const user = require('../data-schema/user');
 const notification = require('../data-schema/notification');
+const subscription = require('../data-schema/subscriptions');
 var id;
 const fs = require('fs');
 const nodemailer = require('nodemailer');
@@ -75,3 +76,11 @@ exports.rendere = (req,res,next) => {
       }
     });
   }
+exports.updatesub = (req,res)=>{
+    user.findById(id).then((User)=>{
+        User.subscription_m=req.body.newsubs;
+        for(var i=0;i<User.subscription_m.length;i++){
+          User.paymentot+=
+        }
+    })   
+}

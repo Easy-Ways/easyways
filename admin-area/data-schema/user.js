@@ -15,6 +15,7 @@ const userSchema = mongoose.Schema({
     subscription_y: [{ type: String }],
     status: { type: Number, default:'0'},
     activation: {type: Number, default:'0'},
+    unpaid:[{type:String,default:'None'}],
     m_end: [{ type:String}],
     y_end: [{ type:String}],
     reminder1: {type:String, default:'Enter Reminder'},
