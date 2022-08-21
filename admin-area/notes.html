@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Notification uploader</title>
+    <title>Notes || Easy-Ways</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Easy-Ways.ico">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Bootstrap CSS
 		============================================ -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" >
     <!-- owl.carousel CSS
 		============================================ -->
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -37,9 +37,6 @@
     <!-- main CSS
 		============================================ -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- dropzone CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/dropzone/dropzone.css">
     <!-- educate icon CSS
 		============================================ -->
     <link rel="stylesheet" href="css/educate-custon-icon.css">
@@ -57,16 +54,12 @@
 		============================================ -->
     <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
-    <!-- forms CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/form/all-type-forms.css">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
-    
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -76,6 +69,17 @@
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
+    <!--Preloader-->
+    <!--div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/Easy-Ways.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
     <!-- Start Left menu area -->
     
     <div class="left-sidebar-pro">
@@ -89,13 +93,12 @@
                     <ul class="metismenu" id="menu1">
                         <li class="active">
                             <a  href="/home">
-								   <span class="educate-icon educate-home icon-wrap"></span>
-								   <span title="Home" class="mini-click-non">Home</span>
-								</a>
-                           
+								              <span class="educate-icon educate-home icon-wrap"></span>
+								              <span title="Home" class="mini-click-non">Home</span>
+								            </a>
                         </li>
                         <li>
-                          <a  href="/notes" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-sub-pro">Notes</span></a>
+                          <a  href="/notes" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Notes</span></a>
                         </li>
                         <li>
                             <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Manage Profs</span></a>
@@ -127,7 +130,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+                            <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket "></i>Logout</a>
                         </li>
                           
                     </ul>
@@ -142,7 +145,6 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        
                     </div>
                 </div>
             </div>
@@ -191,51 +193,29 @@
                                     <ul class="mobile-menu-nav">
                                         <li><a data-toggle="collapse" data-target="#Charts" href="/home">Home <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                         </li>
-                                        <li><a href="events.html">Event</a></li>
-                                        <li><a data-toggle="collapse" data-target="#democrou" href="#">Courses <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="democrou" class="collapse dropdown-header-top">
-                                                <li><a data-toggle="collapse" data-target="#democrou" href="#">Math <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                                    <ul id="democrou" class="collapse dropdown-header-top">
-                                                        <li><a href="Courses.html">Courses</a>
-                                                        </li>
-                                                        <li><a href="Methods.html">Methodes</a>
-                                                        </li>
-                                                        <li><a href="Exercices.html">Exercices</a>
-                                                        </li>
-                                                        <li><a href="Devoirs.html">Devoirs</a>
-                                                        </li>
-                                                    </ul>
+                                       
+                                        <li><a data-toggle="collapse" data-target="#demoevent" href="#">Manage Profs <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demoevent" class="collapse dropdown-header-top">
+                                                <li><a href="all-professors.html">All Professors</a>
                                                 </li>
-                                                <li><a data-toggle="collapse" data-target="#democrou" href="#">Physique <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                                    <ul id="democrou" class="collapse dropdown-header-top">
-                                                        <li><a href="Courses.html">Courses</a>
-                                                        </li>
-                                                        <li><a href="Methods.html">Methodes</a>
-                                                        </li>
-                                                        <li><a href="Exercices.html">Exercices</a>
-                                                        </li>
-                                                        <li><a href="Devoirs.html">Devoirs</a>
-                                                        </li>
-                                                    </ul>
+                                                <li><a href="add-professor.html">Add Professor</a>
                                                 </li>
-                                                <li><a data-toggle="collapse" data-target="#democrou" href="#">Science <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                                    <ul id="democrou" class="collapse dropdown-header-top">
-                                                        <li><a href="Courses.html">Courses</a>
-                                                        </li>
-                                                        <li><a href="Methods.html">Methodes</a>
-                                                        </li>
-                                                        <li><a href="Exercices.html">Exercices</a>
-                                                        </li>
-                                                        <li><a href="Devoirs.html">Devoirs</a>
-                                                        </li>
-                                                    </ul>
+                                                <li><a href="edit-professor.html">Edit Professor</a>
                                                 </li>
+                                                
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#demo" href="#">Chat <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="demo" class="collapse dropdown-header-top">
+                                        <li><a data-toggle="collapse" data-target="#demopro" href="#">Manage Students <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demopro" class="collapse dropdown-header-top">
+                                                <li><a href="all-students.html">All Students</a>
+                                                </li>
+                                                <li><a href="edit-student.html">Edit Student</a>
+                                                </li>
+                                                
                                             </ul>
                                         </li>
+                                        <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Data Bases <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>                                         
+                                        </li>   
                                     </ul>
                                 </nav>
                             </div>
@@ -244,82 +224,36 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-            
         </div>
-        <!-- Single pro tab review Start-->
-        <div style="margin-top: 70px;" class="single-pro-review-area mt-t-30 mg-b-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="product-payment-inner-st">
-                            <ul id="myTabedu1" class="tab-review-design">
-                                <li class="active"><a cursor="disabled">Notification Details</a></li>
-                                <h2 style="color:green;margin-top: 25px;"><%=message%></h2>
-                            </ul>
-                            <div id="myTabContent" class="tab-content custom-product-edit">
-                                <div class="product-tab-list tab-pane fade active in" id="description">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="review-content-section">
-                                                <div id="dropzone1" class="pro-ad addcoursepro">
-                                                    <form action="/uploader" class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload" method="POST">
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                                <div class="form-group">
-                                                                    <input name="title" type="text" class="form-control" placeholder="Note Title">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input name="time"  type="text" class="form-control" placeholder="Note Time">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input name="message" type="text" class="form-control" placeholder="Note Message">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                                <div class="form-group">
-                                                                    <label>class :</label>
-                                                                    <br>
-                                                                    <select name="class" >
-                                                                        <option value="A1" >A1</option>
-                                                                        <option value="A2" >A2</option>
-                                                                        <option value="A3" >A3</option>
-                                                                        <option value="A4" >A4</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group res-mg-t-15">
-                                                                     <label >Section :</label>
-                                                                    <br>
-                                                                    <select name="school" >
-                                                                        <option value="Bac-sc" >Bac Sciences</option>
-                                                                        <option value="Bac-Math">Bac Math</option>
-                                                                        <option value="Bac-tech">Bac Technique</option>
-                                                                        <option value="Bac-lett">Bac Lettres</option>
-                                                                        <option value="Bac-eco">Bac Economique et gestion</option>
-                                                                        <option value="Bac-sport">Bac Sport</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="payment-adress">
-                                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <div style="margin-left:25px ; margin-top: 85px; " class="row">
+            <div class="white-box res-mg-t-30 table-mg-t-pro-n" style="margin-bottom: 10px; margin-right: 15px;">
+                <h1 style="margin-left: 15px;text-transform: capitalize;">Our Notes</h1>
+                <p>Don't forget to write your progress!</p>
+             </div>
+             <div style="margin-left:-15px ;" class="courses-area">
+              <div class="container-fluid">
+                  <div class="row">
+                      <%notelist.forEach(c => {%>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="courses-inner res-mg-b-30">
+                              <div class="courses-title">
+                                <h2 style="color: rgb(163, 28, 163);">Subject: </h2>
+                                  <h2><%=c.subject%></h2>
+                              </div>
+                              <div class="courses-alaltic">
+                                  <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-building"></i></span> <%=c.department%></span>
+                                  <span class="cr-ic-r"><span class="course-icon"><i style="color:red ;" class="fa fa-heart"></i></span> <%=c.name%></span>
+                              </div>
+                              <div class="course-des">
+                                  <p><span><i class="fa fa-clock"></i></span> <b>Message:</b> <%=c.message%></p>
+                              </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                      <%})%>
+                  </div>
+              </div>
+          </div>
         </div>
-        
     </div>
 
     <!-- jquery
@@ -346,6 +280,11 @@
     <!-- scrollUp JS
 		============================================ -->
     <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+		============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
     <!-- mCustomScrollbar JS
 		============================================ -->
     <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -356,41 +295,25 @@
     <script src="js/metisMenu/metisMenu-active.js"></script>
     <!-- morrisjs JS
 		============================================ -->
+    <script src="js/morrisjs/raphael-min.js"></script>
+    <script src="js/morrisjs/morris.js"></script>
+    <script src="js/morrisjs/morris-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
     <script src="js/sparkline/jquery.sparkline.min.js"></script>
     <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
     <!-- calendar JS
 		============================================ -->
     <script src="js/calendar/moment.min.js"></script>
     <script src="js/calendar/fullcalendar.min.js"></script>
     <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- maskedinput JS
-		============================================ -->
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/masking-active.js"></script>
-    <!-- datepicker JS
-		============================================ -->
-    <script src="js/datepicker/jquery-ui.min.js"></script>
-    <script src="js/datepicker/datepicker-active.js"></script>
-    <!-- form validate JS
-		============================================ -->
-    <script src="js/form-validation/jquery.form.min.js"></script>
-    <script src="js/form-validation/jquery.validate.min.js"></script>
-    <script src="js/form-validation/form-active.js"></script>
-    <!-- dropzone JS
-		============================================ -->
-    
-    <!-- tab JS
-		============================================ -->
-    <script src="js/tab.js"></script>
     <!-- plugins JS
 		============================================ -->
     <script src="js/plugins.js"></script>
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
 </body>
 
 </html>

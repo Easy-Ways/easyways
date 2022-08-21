@@ -16,9 +16,9 @@ exports.rendere = (req,res,next) => {
             contactlist: cnct,
             message:'',
         })
-    })
-    
-  }
+    }
+  )
+}
 exports.save =(req,res) =>{
     var cid = req.body.id;
     Contact.findById(cid).then((contact)=>{

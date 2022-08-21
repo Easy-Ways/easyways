@@ -15,20 +15,15 @@ exports.rendere = (req,res,next) => {
               (profs) => {
                 Cour.find().then(
                   (cours) => {
-                    Note.findOne().then(
-                      (notes) => {
-                        User.find({type: 'Student', paymentac:'0'}).then(
-                          (userr) => {
-                            res.render('home-admin.html', {
-                              contactlist: contacts,
-                              studentuser: users,
-                              teacherlist: profs,
-                              courlist: cours,
-                              notelist: notes,
-                              studentlist: userr,
-                            })
-                          }
-                        )
+                    User.find({type: 'Student', paymentac:'0'}).then(
+                      (userr) => {
+                        res.render('home-admin.html', {
+                          contactlist: contacts,
+                          studentuser: users,
+                          teacherlist: profs,
+                          courlist: cours,
+                          studentlist: userr,
+                        })
                       }
                     )
                   }
@@ -41,30 +36,20 @@ exports.rendere = (req,res,next) => {
     )
   }
 }
+
 exports.note = (req,res) => {
-  Note.findOne( {} , (err, Obj) => {
-    if(err) {
-      console.log(err);
-    } else{
-      if(!Obj){
-        console.log('nexiste pas');
-      }else{
-        if(req.body.name) {
-          Obj.name = req.body.name;
-        }
-        if(req.body.department) {
-          Obj.department = req.body.department;
-        }
-        if(req.body.subject) {
-          Obj.subject = req.body.subject;
-        }
-        if(req.body.message) {
-          Obj.message = req.body.message;
-        }
-      }
-      Obj.save((err,upd) => {
-        res.redirect('/home');
-      });
-    }
-  });
-}
+  const note = new Note({
+      message: req.body.message,
+      name: req.body.name,
+      department: req.body.department,
+      subject: req.body.subject,
+ })
+ 
+ note.save()
+     .then(() => {
+        res.redirect('/home')
+     })
+     .catch((error) => {
+         console.error(error);
+     })
+};
