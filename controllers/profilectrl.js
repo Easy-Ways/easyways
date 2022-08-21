@@ -77,10 +77,16 @@ exports.rendere = (req,res,next) => {
     });
   }
 exports.updatesub = (req,res)=>{
-    user.findById(id).then((User)=>{
-        User.subscription_m=req.body.newsubs;
-        for(var i=0;i<User.subscription_m.length;i++){
-          User.paymentot+=
-        }
+    user.findById(id).then((User)=>{ 
+        subscription.findOne({section:User.section,duration:"monthly"}).then((Sub)=>{
+          var indexs=[];
+          for(var i=0;i<req.body.newsubs.length;i++){
+            User.paymentot+=Sub.prices[Sub.subjects.indexOf(req.body.newsubs[i])];
+          }
+          console.log(User.paymentot);
+          User.save().then(()=>{
+            res.redirect('/profile');
+          })
+        })
     })   
 }
