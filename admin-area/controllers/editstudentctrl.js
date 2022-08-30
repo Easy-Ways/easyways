@@ -58,9 +58,7 @@ exports.rendere = (req,res) =>{
 }
 
 exports.save = (req,res)=>{
-    console.log('user' , req.body.class);
     users.class=req.body.class;
-    console.log(users.class);
     users.save().then(()=>{
         res.redirect('/edit-students?id=' + sid );
     })        
@@ -103,7 +101,7 @@ exports.sub = (req,res) => {
                     obb.updateOne({
                         $push: { unpaid: sub_y }
                     }).then(()=>{
-                        console.log('succ')
+                        console.log('succ');
                     })
                     res.redirect('/edit-students?id=' + sid );
                 }
@@ -114,22 +112,31 @@ exports.sub = (req,res) => {
 exports.add = (req,res) =>{
     var mis=req.body.mis;
     var yis=req.body.yis;
-    if(ms){
+    const d = new Date();
+              var year = d.getFullYear();
+              const month = d.getMonth();
+              const date = d.getDate();
+              const monthNames = ["January", "February", "March", "April", "May", "June",
+                                    "July", "August", "September", "October", "November", "December"
+                                  ];
+    if(mis){
+        var m_end = date + ' ' + monthNames[month+1] + ' ' + year;
         User.findByIdAndUpdate( 
             sid,
-            { $push: { subscription_m: mis} },
+            { $push: { subscription_m: mis , m_end: m_end} },
                 (err,obb)=>{
                     if(err){
                         console.error(err)
-                    }
-                    
+                    } 
                 }
             )
         }
-    if(ys){
+    if(yis){
+        year+=1;
+        var y_end = date + ' ' + monthNames[month] + ' ' + year;
         User.findByIdAndUpdate( 
             sid,
-            { $push: { subscription_y: yis}},
+            { $push: { subscription_y: yis, y_end: y_end} },
                 (err,obb)=>{
                     if(err){
                         console.error(err)

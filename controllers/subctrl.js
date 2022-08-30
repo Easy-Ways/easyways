@@ -20,6 +20,8 @@ exports.rendere = (req,res,next) =>{
     }
     user.findOne({_id:id}).then((User)=>{
       sub.find({section:User.section}).then((subs)=>{
+        console.log(subs);
+        console.log(subs[0]);
         if(subs[0].duration=='monthly'){
            ms = subs[0].subjects;
            mp = subs[0].prices;

@@ -175,36 +175,31 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
-                                                        <div role="menu" class="notification-author dropdown-menu animated zoomIn">
-                                                            <div class="notification-single-top">
-                                                                <h1>Notifications</h1>
-                                                            </div>
-                                                            <ul class="notification-menu">
-                                                                <%notuser.forEach(not => {%>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        
-                                                                        <div class="notification-icon">
-                                                                            <span class="notification-date" ><%=not.time%></span>
-                                                                            <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="notification-content">
-                                                                            
-                                                                            <h2><%=not.titre%></h2>
-                                                                            <p><%=not.message%>.</p>
-                                                                           
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <%})%>
-                                                                
-                                                            </ul>
-                                                            <div class="notification-view">
-                                                                <a href="#">View All Notification</a>
-                                                            </div>
+                                                </li>
+                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                                    <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                        <div class="notification-single-top">
+                                                            <h1>Notifications</h1>
                                                         </div>
-                                                    </li>
+                                                        <ul style="margin-left:20px; margin-top: 20px; " class="notification-menu">
+                                                            <%notuser.forEach(not => {%>
+                                                                <li>
+                                                                    <span style="font-size: 20px;" class="cr-ic-r"><span class="course-icon"><i class="fa fa-universal-access" aria-hidden="true"></i></span> <%=not.title%></span>
+                                                                    <div class="courses-alaltic">
+                                                                        <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></span> <%=not.message%></span>
+                                                                        <span class="cr-ic-r"><span class="course-icon"><i style="margin-left: 60px ;" class="fa fa-clock-o" aria-hidden="true"></i></span> <%=not.time%></span>
+                                                                    </div>
+                                                                </li>
+                                                                <br>
+                                                                <button style="margin-left: 255px;" type="submit" class="btn btn-primary waves-effect waves-light"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                                                <br><br>
+                                                            <%})%>
+                                                        </ul>
+                                                        <div class="notification-view">
+                                                            <a>View All Notification</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                                     
                                                     <li class="nav-item">
                                                         <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
@@ -296,12 +291,12 @@
             <div class="breadcome-area">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div style="margin-top:-60px ;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcome-list">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="breadcome-heading">
-                                            <form action="/search"  role="search" class="sr-input-func" method="GET">
+                                            <form action="/esearch"  role="search" class="sr-input-func" method="GET">
                                                 <input type="text" name="searchs" placeholder="Search..." class="search-int form-control">
                                                 <a href="#"><i class="fa fa-search"></i></a>
                                             </form>
@@ -384,9 +379,6 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ exports.rendere = (req,res,next)=>{
                             res.render('Schedule.html', {
                                 studentuser: userr,
                                 scheduleuser: sch,
-                                noteuser: not,
+                                notuser: not,
                               });
                         })
                     })

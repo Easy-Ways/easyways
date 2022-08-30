@@ -43,7 +43,7 @@ app.use((req, res, next) => {
     next();
   });
 //mongoconnect
-mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority') 
+mongoose.connect('mongodb+srv://Easy:z0KDiLVLWWxHVIMU@dashboard.awhtori.mongodb.net/?retryWrites=true&w=majority') 
   .then(()=>{
     console.log("DB Connected");
   })

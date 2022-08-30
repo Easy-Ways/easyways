@@ -175,35 +175,31 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
-                                                    <div role="menu" class="notification-author dropdown-menu animated zoomIn">
-                                                        <div class="notification-single-top">
-                                                            <h1>Notifications</h1>
-                                                        </div>
-                                                        <ul class="notification-menu">
-                                                            <%noteuser.forEach(not => {%>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        
-                                                                        <div class="notification-icon">
-                                                                            <span class="notification-date" ><%=not.time%></span>
-                                                                            <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="notification-content">
-                                                                            
-                                                                            <h2><%=not.titre%></h2>
-                                                                            <p><%=not.message%>.</p>
-                                                                           
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <%})%>
-                                                        </ul>
-                                                        <div class="notification-view">
-                                                            <a href="#">View All Notification</a>
-                                                        </div>
+                                            </li>
+                                            <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                                <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                    <div class="notification-single-top">
+                                                        <h1>Notifications</h1>
                                                     </div>
-                                                </li>
+                                                    <ul style="margin-left:20px; margin-top: 20px; " class="notification-menu">
+                                                        <%notuser.forEach(not => {%>
+                                                            <li>
+                                                                <span style="font-size: 20px;" class="cr-ic-r"><span class="course-icon"><i class="fa fa-universal-access" aria-hidden="true"></i></span> <%=not.title%></span>
+                                                                <div class="courses-alaltic">
+                                                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></span> <%=not.message%></span>
+                                                                    <span class="cr-ic-r"><span class="course-icon"><i style="margin-left: 60px ;" class="fa fa-clock-o" aria-hidden="true"></i></span> <%=not.time%></span>
+                                                                </div>
+                                                            </li>
+                                                            <br>
+                                                            <button style="margin-left: 255px;" type="submit" class="btn btn-primary waves-effect waves-light"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                                            <br><br>
+                                                        <%})%>
+                                                    </ul>
+                                                    <div class="notification-view">
+                                                        <a>View All Notification</a>
+                                                    </div>
+                                                </div>
+                                            </li>
                                                     <li class="nav-item">
                                                         <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                                 <img src="img/product/pro4.jpg" alt="" />
@@ -292,29 +288,9 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-            <div class="breadcome-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list single-page-breadcome">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form action="/search"  role="search" class="sr-input-func" method="GET">
-                                                <input type="text" name="searchs" placeholder="Search..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- Single pro tab review Start-->
-        <div class="single-pro-review-area mt-t-30 mg-b-15">
+        <div style="margin-top:10px ;" class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -395,21 +371,35 @@
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="skill-title">
-                                                                    <h2 style="color: red;">Study Progress</h2>
+                                                                    <h2 style="color: rgb(21, 117, 226);">Study Progress</h2>
                                                                     <hr />
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <h4>Unpaid Subs: Choose Subjects You Want to renew</h4>
-                                                        <form method="POST" action="/profile/usub">
-                                                        <% for (let i = 0; i < studentuser.unpaid.length; i++) { %>
-                                                        <div class="progress-skill">
-                                                            <label><%=studentuser.unpaid[i]%></label>
-                                                            <input type="checkbox" class="form-input" name="newsubs" value="<%=studentuser.unpaid[i]%>">
-                                                            
+                                                        <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
+                                                            <div class="progress-skill">
+                                                                <h2><%=studentuser.subscription[i]%></h2>
+                                                                <div class="progress progress-mini">
+                                                                    <div style="width: <%=studentuser.cour_progress%>%;" class="progress-bar progress-purple"></div>
+                                                                </div>
+                                                            </div>
+                                                        <% } %>
+                                                        <br><br>
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="skill-title">
+                                                                    <h2 style="color: rgb(27, 101, 238);">Subscription</h2>
+                                                                    <hr />
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                            <% } %>
-                                                            <button type="submit" class="btn btn-primary" >Submit</button>
+                                                        <h4 class="box-title">Choose Subjects You Want to add:</h4>
+                                                        <form method="POST" action="/profile/nsub">
+                                                            <ul class="basic-list">
+                                                                <% for (let i = 0; i < sublist.subjects.length; i++) { %>
+                                                                    <li><%=sublist.subjects[i]%> (<%=sublist.prices[i]%> DT) <span class="pull-right"><button name="addsubs" value="<%=sublist.subjects[i]%>" type="submit" class="btn btn-info" >Add</button></span></li>
+                                                                <% } %>
+                                                            </ul>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -505,9 +495,6 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
 </body>
 
 </html>

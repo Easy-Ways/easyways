@@ -10,7 +10,7 @@ exports.upload = (req,res,next)=>{
             time : req.body.time,
             message : req.body.message,
             class : req.body.class,
-            subject : req.body.subject,
+            section : req.body.section,
     });
     notif.save()
     .then(()=>{

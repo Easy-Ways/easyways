@@ -213,32 +213,25 @@
                                                         <div class="notification-single-top">
                                                             <h1>Notifications</h1>
                                                         </div>
-                                                        <ul class="notification-menu">
+                                                        <ul style="margin-left:20px; margin-top: 20px; " class="notification-menu">
                                                             <%notuser.forEach(not => {%>
-                                                            <li>
-                                                                <a href="#">
-                                                                    
-                                                                    <div class="notification-icon">
-                                                                        <span class="notification-date" ><%=not.time%></span>
-                                                                        <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
+                                                                <li>
+                                                                    <span style="font-size: 20px;" class="cr-ic-r"><span class="course-icon"><i class="fa fa-universal-access" aria-hidden="true"></i></span> <%=not.title%></span>
+                                                                    <div class="courses-alaltic">
+                                                                        <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></span> <%=not.message%></span>
+                                                                        <span class="cr-ic-r"><span class="course-icon"><i style="margin-left: 60px ;" class="fa fa-clock-o" aria-hidden="true"></i></span> <%=not.time%></span>
                                                                     </div>
-                                                                    <div class="notification-content">
-                                                                        
-                                                                        <h2><%=not.titre%></h2>
-                                                                        <p><%=not.message%>.</p>
-                                                                       
-                                                                    </div>
-                                                                </a>
-                                                            </li>
+                                                                </li>
+                                                                <br>
+                                                                <button style="margin-left: 255px;" type="submit" class="btn btn-primary waves-effect waves-light"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                                                <br><br>
                                                             <%})%>
-                                                            
                                                         </ul>
                                                         <div class="notification-view">
-                                                            <a href="#">View All Notification</a>
+                                                            <a>View All Notification</a>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
 															<img src="img/product/pro4.jpg" alt="" />
@@ -308,35 +301,15 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-            <div class="breadcome-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form action="/search"  role="search" class="sr-input-func" method="GET">
-                                                <input type="text" name="searchs" placeholder="Search..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="white-box res-mg-t-30 table-mg-t-pro-n" style="margin-left: 15px;margin-bottom: 10px; margin-right: 15px;">
+        <div class="white-box res-mg-t-30 table-mg-t-pro-n" style="margin-left: 15px;margin-bottom: 10px; margin-right: 15px; margin-top: 75px;">
             <h1 style="margin-left: 15px;text-transform: capitalize;">Welcome Back <%=studentuser.name%></h1>
+            <p>Your excuses have no control over you. Challenge them!</p>
             <%if( studentuser.paymentot > 0 ) {%>
                 <div class="alert alert-danger" role="alert">
                 There's some subscription unpaid, Please check your account!
               </div>
             <%}%>  
-            <p>Your excuses have no control over you. Challenge them!</p>
         </div>
          
 <div class=" container-fluid" style="display: block;">

@@ -238,8 +238,12 @@
                     <%contactlist.forEach(c => {%>
                     <div class="white-box res-mg-t-30 table-mg-t-pro-n" style="margin-bottom: 10px; margin-right: 15px; margin-left: -15px;">
                         <h2 style="text-transform: capitalize; color: rgb(18, 126, 175); font-size: 25px; ">From <%=c.name%></h2>
-                        <h3 style="color: rgb(112, 9, 116); margin-left: 20px;">Subject: </h3>
-                        <p style="margin-left:40px ;"><%=c.subject%>.</p>
+                        <div style="margin-left: 10px;" class="course-des">
+                          <p><span><i class="fa fa-envelope"></i></span> <b>Email:</b> <%=c.email%></p>
+                        </div>
+                        <div style="margin-left: 20px;" class="course-des">
+                          <p><span><i class="	far fa-address-book"></i></span> <b>Subject: </b> <%=c.subject%></p>
+                        </div>
                         <h3 style="color: rgb(112, 9, 116); margin-left: 20px;">message: </h3>
                         <p style="margin-left:40px ;"><%=c.message%>.</p>
                            

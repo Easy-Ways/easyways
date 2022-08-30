@@ -211,83 +211,46 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
-                                                        <div role="menu" class="notification-author dropdown-menu animated zoomIn">
-                                                            <div class="notification-single-top">
-                                                                <h1>Notifications</h1>
-                                                            </div>
-                                                            <ul class="notification-menu">
-                                                                <%noteuser.forEach(not => {%>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        <div class="notification-icon">
-                                                                            <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="notification-content">
-                                                                            <span class="notification-date"><%=not.time%></span>
-                                                                            <h2><%=not.titre%></h2>
-                                                                            <p><%=not.message%>.</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <%})%>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        <div class="notification-icon">
-                                                                            <i class="fa fa-cloud edu-cloud-computing-down" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="notification-content">
-                                                                            <span class="notification-date">16 Sept</span>
-                                                                            <h2>Sulaiman din</h2>
-                                                                            <p>Please done this project as soon possible.</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        <div class="notification-icon">
-                                                                            <i class="fa fa-eraser edu-shield" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="notification-content">
-                                                                            <span class="notification-date">16 Sept</span>
-                                                                            <h2>Victor Jara</h2>
-                                                                            <p>Please done this project as soon possible.</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">
-                                                                        <div class="notification-icon">
-                                                                            <i class="fa fa-line-chart edu-analytics-arrow" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="notification-content">
-                                                                            <span class="notification-date">16 Sept</span>
-                                                                            <h2>Victor Jara</h2>
-                                                                            <p>Please done this project as soon possible.</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                            <div class="notification-view">
-                                                                <a href="#">View All Notification</a>
-                                                            </div>
+                                                </li>
+                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                                    <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                        <div class="notification-single-top">
+                                                            <h1>Notifications</h1>
                                                         </div>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                                <img src="img/product/pro4.jpg" alt="" />
-                                                                <span class="admin-name">Abbes Salmen</span>
-                                                                <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
-                                                            </a>
-                                                        <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                            <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
-                                                            </li>
-                                                            <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
-                                                            </li>
-                                                            <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
-                                                            </li>
+                                                        <ul style="margin-left:20px; margin-top: 20px; " class="notification-menu">
+                                                            <%notuser.forEach(not => {%>
+                                                                <li>
+                                                                    <span style="font-size: 20px;" class="cr-ic-r"><span class="course-icon"><i class="fa fa-universal-access" aria-hidden="true"></i></span> <%=not.title%></span>
+                                                                    <div class="courses-alaltic">
+                                                                        <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></span> <%=not.message%></span>
+                                                                        <span class="cr-ic-r"><span class="course-icon"><i style="margin-left: 60px ;" class="fa fa-clock-o" aria-hidden="true"></i></span> <%=not.time%></span>
+                                                                    </div>
+                                                                </li>
+                                                                <br>
+                                                                <button style="margin-left: 255px;" type="submit" class="btn btn-primary waves-effect waves-light"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                                                <br><br>
+                                                            <%})%>
                                                         </ul>
-                                                    </li>
+                                                        <div class="notification-view">
+                                                            <a>View All Notification</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+															<img src="img/product/pro4.jpg" alt="" />
+															<span class="admin-name"><%=studentuser.Fullname%> <%=studentuser.name%></span>
+															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+														</a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <li><a href="/Profile"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                        </li>
+                                                        <li><a href="/home/disconnect"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
                                                 </ul>
                                             </div>
                                         </div>

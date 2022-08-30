@@ -10,7 +10,7 @@ exports.rendere = (req,res,next)=>{
     }
     user.findOne({ _id: id}).then(
       (userr) => {
-                  notif.find({ class: userr.class , section:userr.section}).then((not)=>{
+                  notif.find({ class: userr.class, section:userr.section}).then((not)=>{
                     res.render('home.html', {
                       studentuser: userr,
                       notuser: not,

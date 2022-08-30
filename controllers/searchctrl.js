@@ -7,8 +7,8 @@ exports.search = (req,res,next) => {
     const id = req.cookies.id;
     if(!id){
       return res.redirect('/login');
-  }
-    Cour.find({name: {$regex: new RegExp('^' + cour + '.*')} }).then(
+    }
+    Cour.find({name: {$regex: new RegExp('^' + cour[0].toUpperCase() + cour.substring(1) + '.*')}, type: 'cour' }).then(
           (cours) => {
             user.findOne({_id:id}).then((User)=>{
                 notification.find({class: User.class}).then((nots)=>{

@@ -4,6 +4,9 @@ const app = express();
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const search = require('./routers/search');
+const msearch = require('./routers/msearch');
+const esearch = require('./routers/esearch');
+const dsearch = require('./routers/dsearch');
 const signup = require('./routers/singup');
 const section = require('./routers/section')
 const signin = require('./routers/signin');
@@ -55,7 +58,7 @@ app.use((req, res, next) => {
     next();
   });
 //mongoconnect
-mongoose.connect('mongodb+srv://Salim:1u78NxBzzqW7k9Xi@dash.yle9bhb.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Easy:z0KDiLVLWWxHVIMU@dashboard.awhtori.mongodb.net/?retryWrites=true&w=majority') 
   .then(()=>{
     console.log("DB Connected");
   })
@@ -87,6 +90,9 @@ app.use('/d17',d17);
 //student-dashboard
 app.use('/home',home);
 app.use('/search', search);
+app.use('/msearch', msearch);
+app.use('/esearch', esearch);
+app.use('/dsearch', dsearch);
 app.use('/Profile',profile);
 app.use('/Courses', course);
 app.use('/OurCour',courlock);
