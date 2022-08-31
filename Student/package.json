@@ -1,7 +1,6 @@
 {
   "name": "student",
   "version": "1.0.0",
-  "description": "Free admin dashboard template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
