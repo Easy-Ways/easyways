@@ -77,11 +77,11 @@ app.use('/guide',guide);
 app.use('/contact',contact);
 app.use('/about-us',aboutus);
 app.use('/register', signup);
-app.use('/', section).listen(4000);
+app.use('/', section);
 app.use('/subscription',subscription);
 app.use('/login',signin);
 app.use('/activate-acc',activate);
-app.use('/forgetpass',fpass);
+app.use('/forgetpass',fpass).listen(4000);
 app.use('/resetpass',reset);
 app.use('/payment',payment);
 app.use('/pay',paymethod);
@@ -102,8 +102,4 @@ app.use('/Exercices',exercice);
 app.use('/Methods',method);
 app.use('/Devoirs',devoir);
 
-//admin-dashboard
-app.use('/sch-up',sch_up);
-app.use('/sub-up',sub_up);
-app.use('/uploader',uploader);
 
