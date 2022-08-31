@@ -2025,8 +2025,10 @@ ul.two-part-sp li{
 }
 .header-top-area {
     position: fixed;
-    background: -webkit-linear-gradient(178deg, #e12503 0%, #85060c 100%);
-    background: linear-gradient(178deg, #e12503 0%, #85060c 100%);
+    background:#573ff5;
+    background:-moz-linear-gradient(to right, rgb(1,46,120) 0%, rgb(1,17,42) 100%);
+    background:-webkit-linear-gradient(right, rgb(1,46,120) 0%, rgb(1,17,42) 100%);
+    background:linear-gradient(to right, rgb(1,46,120) 0%, rgb(1,17,42) 100%);
     z-index: 99;
     left: 200px;
     right: 0;
@@ -3654,9 +3656,7 @@ element.style {
 div#sparklinehome canvas {
     width: 100% !important;
 }
-.header-top-area {
-    background: #006DF0;
-}
+
 .sidebar-nav .metismenu{
 	background: #fff;
 }
