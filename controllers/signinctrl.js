@@ -65,8 +65,14 @@ exports.signin = (req,res,next)=>{
   exports.rendere = (req,res,next)=>{
     id=req.cookies.id;
     if(id){
+      user.findById(id).then((User)=>{
+        if(!User){
+          return res.redirect('/login');
+        }else{
+          return res.redirect('/home');
+        }
+      })
       
-      return res.redirect('/home');
     }else{
       res.render('login.html',{
         message: " "

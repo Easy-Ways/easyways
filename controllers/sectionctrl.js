@@ -6,9 +6,11 @@ exports.F = (req,res,next)=>{
     var data = url.parse(urll,true);
     var q= data.query;
     id=q.id;
-    if(!id){
-      res.redirect('/login');
-    }
+    user.findById(id).then((User)=>{
+      if(!User){
+        return res.redirect('/login');
+      }
+    })
     res.render('sectionfac.html');
 };
 exports.l = (req,res,next)=>{

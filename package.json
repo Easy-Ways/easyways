@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "14": "^3.1.6",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
     "bootstrap-icons": "^1.9.1",
@@ -11,13 +10,17 @@
     "fs": "^0.0.1-security",
     "googleapis": "^105.0.0",
     "json-web-token": "^3.2.0",
+    "minimatch": "^3.0.2",
     "mongoose": "^6.4.3",
     "mongoose-unique-validator": "^3.1.0",
-    "node-sass": "^7.0.1",
+    "node-gyp": "9.1.0",
+    "node-sass": "7.0.1",
     "nodemailer": "^6.7.7",
     "nodemon": "^2.0.19",
     "path": "^0.12.7",
     "regex": "^0.1.1",
+    "scss-tokenizer": "^0.4.2",
+    "tar": "^6.1.11",
     "url": "^0.11.0"
   },
   "name": "landboard",
@@ -28,5 +31,8 @@
     "start": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0"
+  }
 }

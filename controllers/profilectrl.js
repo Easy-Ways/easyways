@@ -8,11 +8,11 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 exports.rendere = (req,res,next) => {
      id = req.cookies.id;
-    if(!id){
-        return res.redirect('/login');
-    }
     user.findOne({_id: id}).then(
       (userr) => {
+        if(!userr){
+          return res.redirect('/login');
+        }
         notification.find({class: userr.class, section:userr.section}).then((nots)=>{
           subscription.findOne({section: userr.section,duration:"monthly"}).then((subs) => {
             res.render('Profile.html', {
@@ -33,18 +33,16 @@ exports.rendere = (req,res,next) => {
         console.log(err);
       }else{
         if(!obb){
-          console.log('nexiste pas');
+          return res.redirect('/login');
         }else{
           if(req.body.email_adresse) {
             obb.email = req.body.email_adresse;
-          }
-          if(req.body.password) {
-            obb.password = req.body.password;
+            obb.activation ='0';
           }
           if(req.body.mobile) {
             obb.phone = req.body.mobile;
           }
-          obb.activation ='0';
+          
         }
         obb.save(() => {
           

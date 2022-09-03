@@ -19,6 +19,9 @@ exports.rendere = (req,res,next) =>{
       return res.redirect('/login');
     }
     user.findOne({_id:id}).then((User)=>{
+      if(!User){
+        return res.redirect('/login');
+      }
       sub.find({section:User.section}).then((subs)=>{
         console.log(subs);
         console.log(subs[0]);

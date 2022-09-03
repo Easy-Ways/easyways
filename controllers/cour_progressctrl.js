@@ -5,15 +5,13 @@ const { save } = require('./sectionctrl');
 var id;
 exports.rendere = (req,res) => {
     id=req.cookies.id;
-    if(!id){
-        return res.redirect('/login');
-    }
+    
     user.findOne({_id: id}, (err, Obg) => {
         if(err) {
         console.log(err);
         } else{
             if(!Obg){
-                console.log('nexiste pas');
+                return res.redirect('/login');
             }else{
                 Cour.findOne({name: Obg.last_cour}).then(
                     (cor) => {

@@ -5,11 +5,12 @@ const Cour = require ('../data-schema/courses') ;
 const notif = require('../data-schema/notification');
 exports.rendere = (req,res,next)=>{  
     id=req.cookies.id;
-    if(!id){
-      return res.redirect('/login');
-    }
+    
     user.findOne({ _id: id}).then(
       (userr) => {
+        if(!userr){
+          return res.redirect('/login');
+        }
                   notif.find({ class: userr.class, section:userr.section}).then((not)=>{
                     res.render('home.html', {
                       studentuser: userr,
@@ -28,7 +29,7 @@ exports.reminder = (req,res) => {
       console.log(err);
     } else{
       if(!Obj){
-        console.log('nexiste pas');
+        return res.redirect('/login');
       }else{
         if(req.body.reminder1) {
           Obj.reminder1 = req.body.reminder1;
@@ -53,9 +54,12 @@ exports.reminder = (req,res) => {
  //discoonect function
  exports.disconnect = (req,res) =>{
     user.findOne({ _id : id }).then(
-      (user) => {
-        user.status='0';
-        user.save().then(()=>{
+      (User) => {
+        if(!User){
+          return res.redirect('/login');
+        }
+        User.status='0';
+        User.save().then(()=>{
           res.clearCookie('id',{path: '/'});
           res.redirect('/login');
         })
