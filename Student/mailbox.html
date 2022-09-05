@@ -10,6 +10,7 @@
         <script src="sendmsg.js" defer></script>
         <!-- favicon
             ============================================ -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" type="image/x-icon" href="img/Easy-Ways.ico">
         <!-- Google Fonts
             ============================================ -->
@@ -413,6 +414,19 @@
                                     <table class="table table-hover tab(le-mailbox" id="sendmsg" style="display: block;">
                                         <tbody>
                                             <h2>Feel Free to ask , we are always Here!</h2>
+                                            <h5 id="room">
+                                                Connected to: None!
+                                            </h5>
+                                            <form id="secform" class="form-default">
+                                                <select class="form-control"  id="sec-Input">
+                                                    <option value="" selected disabled hidden>Select A subject</option>
+                                                    <%studentuser.subscription.forEach(sub =>{%>
+                                                        <option><%=sub%></option>
+                                                        <%})%>
+                                                </select>
+                                                <input type="hidden" value="<%=studentuser._id%>" id="sid">
+                                                <button id="connect-button" type="submit" class="btn btn-link"> Connect To room <i class="fa-solid fa-right-to-bracket fa"></i></button>
+                                        </form>
                                             <div id="reciever" style="
                                                 flex-grow: 1;
                                                 overflow-y: auto;
@@ -429,13 +443,8 @@
                                             </div>
                                             
                                                 <div class="d-flex justify-content-center flex-row">
-                                                    <form id="form" class="form-default">
-                                                            <select class="form-control"  id="sec-Input">
-                                                                <option value="" selected disabled hidden>Select A subject</option>
-                                                                <%studentuser.subscription.forEach(sub =>{%>
-                                                                    <option><%=sub%></option>
-                                                                    <%})%>
-                                                            </select>
+                                                   
+                                                    <form id="textform" class="form-default">      
                                                             <br>
                                                             <input id="msg-Input" type="text" placeholder="Type a message"  class="form-control rounded-0 border-0 py-4 bg-light" style="width: 100%;">
                                                             <button id="submit-button" type="submit" class="btn btn-link"> Send <i class="fa fa-paper-plane"></i></button>
