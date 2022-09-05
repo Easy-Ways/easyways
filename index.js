@@ -11,7 +11,6 @@ const signup = require('./routers/singup');
 const section = require('./routers/section')
 const signin = require('./routers/signin');
 const home = require('./routers/home');
-const uploader = require('./routers/upload');
 const events = require('./routers/events');
 const pricing = require('./routers/pricing');
 const guide = require('./routers/guide');
@@ -27,8 +26,6 @@ const activate = require('./routers/activate');
 const schedule = require('./routers/schedule');
 const fpass = require('./routers/fpass');
 const reset = require('./routers/reset');
-const sch_up = require('./routers/sch-up');
-const sub_up = require('./routers/sub-up');
 const payment = require('./routers/payment');
 const paymethod = require('./routers/paymethod');
 const bank = require('./routers/bank');
@@ -36,6 +33,7 @@ const d17 = require('./routers/d17')
 const exercice = require('./routers/exercice');
 const method = require('./routers/method');
 const devoir = require('./routers/devoir');
+const mailbox = require('./routers/mailbox');
 //prereq
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
@@ -101,5 +99,6 @@ app.use('/Schedule',schedule);
 app.use('/Exercices',exercice);
 app.use('/Methods',method);
 app.use('/Devoirs',devoir);
+app.use('/mailbox',mailbox);
 
 
