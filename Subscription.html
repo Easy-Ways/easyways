@@ -4,12 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title> Easy-Ways || Subcription</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Easy-Ways Academy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="teacher.easy-ways.tn" />
+        <meta property="og:image" content="https://i.im.ge/2022/09/14/1TVei9.Easy-Ways.jpg" />
+        <meta proprety="author" content="Easy-Ways Dev">
+        <meta name="keywords" content="fac, MPI, tunisie, elearning, cours, exercices, magazines, etude, maths, physique, devoirat, devoirs, serie">
+        <meta name="description" content="Easy-Ways is the first academy built by student for students,affording new fonctionailties never used befor in Tunisia.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/Easy-Ways.ico">
 
 	<!-- CSS here -->
+    <link rel="stylesheet" href="glider.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -25,11 +32,17 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="test/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+       
+    </script>
+   
 </head>
+
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -47,97 +60,188 @@
 
     
         <!-- Login Admin -->
-        <form class="form-default" action="/subscription" method="POST" required>
+        
             <div class="subme ">
                 <!-- logo-login -->
                 <div class="logo-login">
                     <img src="assets/img/logo/Easy-Ways.png" alt="">
                 </div>
                 <h2 id="Select">Choose your subjects:</h2>
-                <h2 style="color: red;"><%=message%></h2>
-                <section id="plans">
-                    <div class="container">
-                        <div class="row d-flex justify-content-center align-content-center align-items-center ">
-            
-                            <!-- item -->
-                            <div class=" text-center myPopover" style="width:30vw;" data-toggle="popover"
-                            title="<p style='font-size:large;'>Detailed Prices:</p>"
-                            data-trigger="hover"
-                            data-html="true"
-                            data-placement="left"
-                            data-container="body"
-                            data-content="<%for(let i =0; i< ms.length;i++){%><p style='font-size:large;'><%=ms[i]%> : <%=mp[i]%> DT <%}%></p>" >
-                                <div class="panel  panel-pricing">
-                                    <div class="panel-heading panel-violet">
-                                        
-                                        <h3 style="color:black;">Monthly Plans</h3>
-                                    </div>
-                                    <div class="panel-body text-center">
-                                        <p>Pick subjects :</p>
-                                    </div>
-                                    <ul class="list-group text-center">
-                                        <%for(let i =0; i< ms.length;i++){%>
-                                        <li class="list-group-item"></i>
-                                            <input type="checkbox" name="subject_m" value="<%=ms[i]%>">
-                                            <label class="subject" style="font-size:large;"><%=ms[i]%></label>
-                                            
-                                        </li>
-                                        <%}%>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                            <!-- /item -->
-                                <br> <br>
-                            <!-- item -->
-                            <div class=" text-center myPopover" style="width:30vw;" data-toggle="popover"
-                            data-placement="right" title="<p style='font-size:large;'>Detailed Prices:</p>"
-                            data-trigger="hover"
-                            data-html="true"
-                            data-content="<%for(let i =0; i< ys.length;i++){%><p style='font-size:large;'><%=ys[i]%> : <%=yp[i]%> DT <%}%></p>" >
-                                <div class="panel  panel-pricing">
-                                    <div class="panel-heading panel-blue">
-                                        
-                                        <h3 style="color:black;">Yearly Plans</h3>
-                                    </div>
-                                    <div class="panel-body text-center">
-                                        <p>Pick Subjects:</p>
-                                    </div>
-                                    <ul class="list-group text-center">
-                                        <%for(let i =0; i< ys.length;i++){%>
-                                        <li class="list-group-item"></i>
-                                            <input type="checkbox" name="subject_y" value="<%=ys[i]%>">
-                                            <label class="subject" style="font-size:large;"><%=ys[i]%></label>
-                                        </li>
-                                        <%}%>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
+                <h2 style="color: red; font-size:3vw;" ><%=message%></h2>
+                <br>
+                <div id="selectdiv" style="display: flex;
+                justify-content: center;">
+                    <select onchange="show(this.value)">
+                        <option value="y" >Yearly subscriptions</option>
+                        <option value="m" selected >Monthly subscriptions</option>
+                      <option value="s"  >Semester subscriptions</option>
+                    </select>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="glider-contain multiple" >
+                   
+                    <a href="#" class="glider-prev" id="gliderbtn"><i style="color: rgb(255, 255, 255);" class="fa fa-chevron-left" ></i></a>
+                    <form class="form-default" action="/subscription" method="POST" required>
+                    <div class="glider" id="monthly">
                         
-                            <br>
-                            <br>
-                            <input type="submit" style="background-color: #ffffff;
+                        <%for(let i =0; i < ms.length;i++){%>
+                        <figure style="background-color: #ffffff;margin: 0 5px;" >
+                            <blockquote>
+                                <div class="panel-heading panel-violet" style="text-align:center ;">       
+                                    <h3 style="color:black;"><%=ms[i]%></h3>
+                                </div>
+                            </blockquote>      
+                            <figcaption>
+                                <div class="panel-body text-center " style="text-align:center;">
+                                    <p>Price : <%=mp[i]%></p>
+                                  	<p><%=mk[i]%></p>
+                                    <input type="checkbox" value="<%=ms[i]%>" name="subject_m"  class="form-input <%=mc[i]%>" />
+                                </div>
+                            </figcaption>  
+                        </figure>
+                        
+                        <%}%>
+                        
+                    </div>
+                    <div class="glider" style="display:none;"  id="yearly">
+                        
+                        <%for(let i =0;i< ys.length;i++){%>
+                            <figure style="background-color: #ffffff;margin: 0 5px;" >
+                                <blockquote>
+                                    <div class="panel-heading panel-violet" style="text-align:center ;">       
+                                        <h3 style="color:black;"><%=ys[i]%></h3>
+                                    </div>
+                                </blockquote>      
+                                <figcaption>
+                                    <div class="panel-body text-center " style="text-align:center;">
+                                        <p>Price : <%=yp[i]%></p>
+                                          <p><%=yk[i]%></p>
+                                        <input type="checkbox" value="<%=ys[i]%>" name="subject_y" id="<%=yc[i]%>" class="form-input" />
+                                    </div>
+                                </figcaption>  
+                            </figure>
+                        <%}%>
+                        
+                    </div>
+                    <div class="glider" style="display:none;"  id="semester">
+                        
+                       <%for(let i =0;i< ss.length;i++){%>
+                            <figure style="background-color: #ffffff;margin: 0 5px;"
+                                    data-toggle="popover"
+                                     data-placement="right" title="Hover Popover"
+                                     data-trigger="hover"
+                                     data-content="I display when pointer over the element" class="myPopover" >
+                                  <blockquote>
+                                    <div class="panel-heading panel-violet" style="text-align:center ;">       
+                                        <h3 style="color:black;"><%=ss[i]%></h3>
+                                    </div>
+                                </blockquote>      
+                                <figcaption>
+                                    <div class="panel-body text-center " style="text-align:center;">
+                                        <p>Price : <%=sp[i]%>
+										   <p><%=sk[i]%></p>
+										</p>
+                                        <input type="checkbox" value="<%=ss[i]%>" name="subject_s" id="<%=sc[i]%>"  class="form-input" style="position:fixed;top:78%;"/>
+                                    </div>
+                                </figcaption>  
+                            </figure>
+                        <%}%>
+                        
+                    </div>
+                    <a href="#" class="glider-next"><i style="color: rgb(255, 255, 255);" class="fa-chevron-right fa" id="gliderbtn"></i></a>
+                    <div id="dots" class="glider-dots" style="color: #ffffff;" ></div>
+                    <div style="display: flex;
+                    justify-content: center;">
+                    
+                        <input type="submit" style="background-color: #ffffff;
                             color: black;
                             border: none;
                             border-radius: 10px;
                             margin-top: 15px;
+                            
                             font-size:large;
                             height: 30px;
                             width:130px;" value="Submit">
-                            
-                            </div>
-                            
-                            </div>
-                        </section>
+                    
+                    </div>
+                    </form>
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+                <script src="glider.min.js"></script>
+                <script>
+        function show(value){
+            if(value=="y"){
+                document.getElementById("yearly").style.display="flex";
+                document.getElementById("monthly").style.display="none";
+                  document.getElementById("semester").style.display="none";
+            }
+            if(value=="m"){
+                 document.getElementById("monthly").style.display="block";
+                 document.getElementById("yearly").style.display="none";
+                  document.getElementById("semester").style.display="none";
+                 
+            }
+            if(value=="s"){
+                  document.getElementById("monthly").style.display="none";
+                 document.getElementById("yearly").style.display="none";
+                  document.getElementById("semester").style.display="block";
+                 
+            }
+            
+        }		
+                    new Glider(document.querySelector('#monthly'), {
+                        slidesToScroll: 1,
+                        slidesToShow: 3,
+                        draggable: true,
+                        dots: '.glider-dots',
+                        arrows: {
+                            prev: '.glider-prev',
+                            next: '.glider-next'
+                        }
+                        });
+                    new Glider(document.querySelector('#yearly'), {
                         
+                        slidesToShow: 1,
+                        draggable: true,
+                        
+                        arrows: {
+                            prev: '.glider-prev',
+                            next: '.glider-next'
+                        }
+                        });
+                    new Glider(document.querySelector('#semester'), {
+                        slidesToScroll: 1,
+                        slidesToShow: 3,
+                        draggable: true,
+                        
+                        arrows: {
+                            prev: '.glider-prev',
+                            next: '.glider-next'
+                        }
+                        });
+                     $('.myPopover').popover();
+					
+                       
+                </script>
             </div>
             
-        </form>
+            <script src="./prv.js"></script>
         <!-- /end login form -->
     </main>
-
-    
+                          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./glide.js"></script>
+    <script src="./glider.min.js"></script>
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -186,7 +290,8 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
       
             <script>
-                $('.myPopover').popover();
+                
+                
             </script>
     </body>
 </html>

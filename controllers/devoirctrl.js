@@ -8,9 +8,12 @@ var urll="xx";
 var name;
 exports.rendere = (req,res,next) => {
     id=req.cookies.id;
-   
+   if(!id){
+   return res.redirect('/login');
+   }
     user.findOne({_id:id}).then((User)=>{
       if(!User){
+        res.clearCookie('id',{path: '/'});
         return res.redirect('/login');
       }
         urll = `${req.protocol}://${req.get("host")}${req.originalUrl}`;

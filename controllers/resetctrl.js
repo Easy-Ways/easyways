@@ -8,8 +8,11 @@ exports.rendere = (req,res) =>{
     var data = url.parse(urll,true);
     var q= data.query;
     id=q.id;
+  	if(!id){
+      return res.redirect('/login');}
     user.findById(id).then((User)=>{
         if(!User){
+          res.clearCookie('id',{path: '/'});
             return res.redirect('/login');
         }else{
             res.render("reset-pass.html");

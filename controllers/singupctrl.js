@@ -6,7 +6,7 @@ bcrypt.hash(req.body.password,10)
     const User = new user({
         Fullname: req.body.fullname,
         name: req.body.name,
-        email: req.body.email,
+        email: req.body.email.toLowerCase(),
         phone: req.body.phone,
         pass: hash,
         school: req.body.school,

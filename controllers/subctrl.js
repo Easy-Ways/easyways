@@ -5,11 +5,7 @@ var id;
 const fs = require('fs');
 const user = require('../data-schema/user');
 const nodemailer = require("nodemailer");
-var ms;
-var mp;
-var ys;
-var yp;
-var total;
+var ms,mp,mc,ss,sp,sc,ys,yp,yc,mk,sk,yk,total;
 exports.rendere = (req,res,next) =>{
     urll = `${req.protocol}://${req.get("host")}${req.originalUrl}`;
     var data = url.parse(urll,true);
@@ -20,29 +16,46 @@ exports.rendere = (req,res,next) =>{
     }
     user.findOne({_id:id}).then((User)=>{
       if(!User){
+        res.clearCookie('id',{path: '/'});
         return res.redirect('/login');
       }
       sub.find({section:User.section}).then((subs)=>{
-        console.log(subs);
-        console.log(subs[0]);
-        if(subs[0].duration=='monthly'){
-           ms = subs[0].subjects;
-           mp = subs[0].prices;
-           ys = subs[1].subjects;
-           yp = subs[1].prices;
-        }else{
-           ms = subs[1].subjects;
-           mp = subs[1].prices;
-           ys = subs[0].subjects;
-           yp = subs[0].prices;
-        }
+        for(let i = 0; i < subs.length;i++){
+                switch (subs[i].duration){
+                    case "monthly":
+                        ms=subs[i].subjects;
+                        mp=subs[i].prices;
+                    	mc=subs[i].class;
+                    	mk=subs[i].content;
+                    case "semester":
+                        ss=subs[i].subjects;
+                        sp=subs[i].prices;
+                    	sc=subs[i].class;
+                    	sk=subs[i].content;
+                    case "yearly":
+                        ys=subs[i].subjects;
+                        yp=subs[i].prices;
+                    	yc=subs[i].class;
+                    	yk=subs[i].content;
+                    default:
+                        
+                }
+            }
         
         
       res.render('Subscription.html',{
+        ss:ss,
+        sp:sp,
+        sc:sc,
         ms:ms,
         mp:mp,
+        mc:mc,
         ys:ys,
         yp:yp,
+        yc:yc,
+        mk:mk,
+        sk:sk,
+        yk:yk,
         message:' '
       });})
     })
@@ -61,11 +74,12 @@ exports.save = (req,res,next)=>{
               const month = d.getMonth();
               const date = d.getDate();
               const monthNames = ["January", "February", "March", "April", "May", "June",
+                                    "July", "August", "September", "October", "November", "December","January", "February", "March", "April", "May", "June",
                                     "July", "August", "September", "October", "November", "December"
                                   ];
              
               
-            if(req.body.subject_m || req.body.subject_y ) {
+            if(req.body.subject_m || req.body.subject_y || req.body.subject_s) {
               total=0;
               if(req.body.subject_m){
                 var m_end = date + ' ' + monthNames[month+1] + ' ' + year;
@@ -75,6 +89,14 @@ exports.save = (req,res,next)=>{
                   obb.m_end[i]=m_end;
                 }
               }
+              if(req.body.subject_s){
+              var s_end = date + ' ' + monthNames[month+4] + ' ' + year;
+              obb.subscription_s = req.body.subject_s;
+              for(let i='0';i< obb.subscription_s.length;i++){
+              total+=sp[ss.indexOf(obb.subscription_s[i])];
+              obb.s_end[i]=s_end;
+              }
+        	}
               if(req.body.subject_y){
                 obb.subscription_y = req.body.subject_y;
                 year+=1;
@@ -85,11 +107,11 @@ exports.save = (req,res,next)=>{
                 }
               }
               const arr1 = [];
-              obb.subscription = arr1.concat(obb.subscription_m, obb.subscription_y);
+              obb.subscription = arr1.concat(obb.subscription_m, obb.subscription_y,obb.subscription_s);
               obb.paymentot= total;
-              console.log('monthly:',obb.m_end,'yearly:',obb.y_end);
+              
             }else{
-              return res.render('subscription.html',{
+              return res.render('Subscription.html',{
                 message: 'Choose at least one subject!'
               })
             }
@@ -110,12 +132,12 @@ exports.save = (req,res,next)=>{
 
             });
             var htmlstream =fs.readFile("confirmtmp.html", 'utf8', function (err, data) {
-              var link = "http://localhost:4000/activate-acc?id=" + id;
+              var link = "https://easy-ways.tn/activate-acc?id=" + id;
              data = data.replace(/{{link}}/,link);
              let info = ({
-              from: ' support@easy-ways.tn', // sender address
+              from: 'EasySupport <support@easy-ways.tn>', // sender address
               to: obb.email, // list of receivers
-              subject: "Hello ✔", // Subject line
+              subject: "Hello ✔ Activate your account", // Subject line
               text: "", // plain text body
               html: data, // plain text body
             });

@@ -4,10 +4,11 @@ const bcrypt = require('bcrypt');
 const { URLSearchParams } = require('url');
 const cookieparser = require('cookie-parser');
 exports.signin = (req,res,next)=>{
-   user.findOne({ email: req.body.email, type:'Student' }).then(
+   user.findOne({ email: req.body.email.toLowerCase(), type:'Student' }).then(
       (User) => {
         if (!User) {
-          return res.status(401).render('login.html',{
+           res.clearCookie('id',{path: '/'});
+           return res.status(401).render('login.html',{
             message: "User Does Not Exist"
           });
           
@@ -25,10 +26,13 @@ exports.signin = (req,res,next)=>{
           })
         }
         
-        if(User.status===1){
+        if(User.status==1){
+          User.status=0;
+          return User.save().then(()=>{
           return res.render('login.html',{
-            message:'User already logged in another device!'
+            message:'Session Expired , please Login again!'
           })
+          }).catch((err)=>{console.err(err);})
         }
 
         bcrypt.compare(req.body.password, User.pass).then(

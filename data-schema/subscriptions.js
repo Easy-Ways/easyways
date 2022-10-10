@@ -4,5 +4,8 @@ const subschema = mongoose.Schema({
     duration:{type:String},
     subjects:[{type:String}],
     prices:[{type:Number}],
+  	class:[{type:String}],
+    content:[{type:String}],
+
 })
 module.exports = mongoose.model('subscription', subschema); 

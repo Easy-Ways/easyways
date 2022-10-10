@@ -5,12 +5,15 @@ const subscription = require('../data-schema/subscriptions');
 const Contact = require('../data-schema/contact');
 var id;
 const fs = require('fs');
-const nodemailer = require('nodemailer');
+
 exports.rendere = (req,res,next) => {
      id = req.cookies.id;
+  if(!id){
+    return res.redirect('/login');}
     user.findOne({_id: id}).then(
       (userr) => {
         if(!userr){
+          res.clearCookie('id',{path: '/'});
           return res.redirect('/login');
         }
         notification.find({class: userr.class, section:userr.section}).then((nots)=>{
@@ -35,16 +38,17 @@ exports.rendere = (req,res,next) => {
         if(!obb){
           return res.redirect('/login');
         }else{
-          if(req.body.email_adresse) {
-            obb.email = req.body.email_adresse;
-            obb.activation ='0';
-          }
+          
           if(req.body.mobile) {
             obb.phone = req.body.mobile;
           }
           
         }
-        obb.save(() => {
+        if(req.body.email_adresse) {
+            obb.email = req.body.email_adresse;
+            obb.activation ='0';
+          
+        return obb.save(() => {
           
           let transporter = nodemailer.createTransport({
             host:'mail.easy-ways.tn',
@@ -60,21 +64,24 @@ exports.rendere = (req,res,next) => {
 
           });
           var htmlstream =fs.readFile("confirmtmp.html", 'utf8', function (err, data) {
-            var link = "http://localhost:4000/activate-acc?id=" + id;
+            var link = "https://easy-ways.tn/activate-acc?id=" + id;
            data = data.replace(/{{link}}/,link);
            let info = ({
-            from: ' support@easy-ways.tn', // sender address
+            from: 'EasySupport <support@easy-ways.tn>', // sender address
             to: obb.email, // list of receivers
-            subject: "Hello ✔", // Subject line
+            subject: "Hello ✔ Verify your new Email", // Subject line
             text: "", // plain text body
             html: data, // plain text body
           });
           transporter.sendMail(info,()=>{
-          
             res.redirect('/home/disconnect');
           }) 
         });
         });
+      }
+      return obb.save().then(()=>{
+        res.redirect('/profile')
+      })
       }
     });
   }

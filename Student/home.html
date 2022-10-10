@@ -105,6 +105,9 @@
                                 
                             </ul>
                         </li>
+                              <li>
+                                <a href="/forum" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
+                            </li>
                         <li>
                             <a href="/mailbox" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Chat</span></a>
                         </li>
@@ -154,57 +157,10 @@
                                                             <h1>Message</h1>
                                                         </div>
                                                         <ul class="message-menu">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <div class="message-img">
-                                                                        <img src="img/contact/1.jpg" alt="">
-                                                                    </div>
-                                                                    <div class="message-content">
-                                                                        <span class="message-date">16 Sept</span>
-                                                                        <h2>Advanda Cro</h2>
-                                                                        <p>Please done this project as soon possible.</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <div class="message-img">
-                                                                        <img src="img/contact/4.jpg" alt="">
-                                                                    </div>
-                                                                    <div class="message-content">
-                                                                        <span class="message-date">16 Sept</span>
-                                                                        <h2>Sulaiman din</h2>
-                                                                        <p>Please done this project as soon possible.</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <div class="message-img">
-                                                                        <img src="img/contact/3.jpg" alt="">
-                                                                    </div>
-                                                                    <div class="message-content">
-                                                                        <span class="message-date">16 Sept</span>
-                                                                        <h2>Victor Jara</h2>
-                                                                        <p>Please done this project as soon possible.</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <div class="message-img">
-                                                                        <img src="img/contact/2.jpg" alt="">
-                                                                    </div>
-                                                                    <div class="message-content">
-                                                                        <span class="message-date">16 Sept</span>
-                                                                        <h2>Victor Jara</h2>
-                                                                        <p>Please done this project as soon possible.</p>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
+                                                            
                                                         </ul>
                                                         <div class="message-view">
-                                                            <a href="#">View All Messages</a>
+                                                            <a href="/mailbox">View All Messages</a>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -241,8 +197,7 @@
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="/Profile"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
                                                         </li>
-                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
-                                                        </li>
+                                                        
                                                         <li><a href="/home/disconnect"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
                                                         </li>
                                                     </ul>
@@ -275,13 +230,13 @@
                                                     <% for (let i = 0; i < studentuser.subscription.length; i++) { %>
                                                 <li><a data-toggle="collapse" data-target="#democrou" href="#"><%=studentuser.subscription[i] %> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                                     <ul id="democrou" class="collapse dropdown-header-top">
-                                                        <li><a href="#">Courses</a>
+                                                        <li><a href="/Courses?m=<%=studentuser.subscription[i]%>">Courses</a>
                                                         </li>
-                                                        <li><a href="#">Methodes</a>
+                                                        <li><a href="/Methods?m=<%=studentuser.subscription[i]%>">Methodes</a>
                                                         </li>
-                                                        <li><a href="#">Exercices</a>
+                                                        <li><a href="/Exercices?m=<%=studentuser.subscription[i]%>">Exercices</a>
                                                         </li>
-                                                        <li><a href="#">Devoirs</a>
+                                                        <li><a href="/Devoirs?m=<%=studentuser.subscription[i]%>">Devoirs</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -289,7 +244,10 @@
                                                 
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#demo" href="#">Chat <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                              <li>
+                                <a href="/forum" aria-expanded="false"><span class="mini-click-non">Forum</span></a>
+                            </li>
+                                        <li><a data-toggle="collapse" data-target="#demo" href="/mailbox">Chat <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demo" class="collapse dropdown-header-top">
                                             </ul>
                                         </li>
@@ -307,7 +265,7 @@
             <p>Your excuses have no control over you. Challenge them!</p>
             <%if( studentuser.paymentot > 0 ) {%>
                 <div class="alert alert-danger" role="alert">
-                There's some subscription unpaid, Please check your account!
+                There's some subscription unpaid, Please contact us As soon As Possible!
               </div>
             <%}%>  
         </div>

@@ -4,8 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title> Easy-Ways || Sign-up</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Easy-Ways Academy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="teacher.easy-ways.tn" />
+        <meta property="og:image" content="https://i.im.ge/2022/09/14/1TVei9.Easy-Ways.jpg" />
+        <meta proprety="author" content="Easy-Ways Dev">
+        <meta name="keywords" content="fac, MPI, tunisie, elearning, cours, exercices, magazines, etude, maths, physique, devoirat, devoirs, serie">
+        <meta name="description" content="Easy-Ways is the first academy built by student for students,affording new fonctionailties never used befor in Tunisia.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/Easy-Ways.ico">
 
@@ -24,6 +30,15 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+   <style>
+        body {
+            background:  url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        }
+        </style>
 </head>
 <body>
     <script>
@@ -67,19 +82,19 @@
             <h3 style="color:red;"><strong><%=message%></strong></h3>
             <div class="form-input">
                 <label for="name">Name</label>
-                <input  type="text" name="name" placeholder="Enter your Name.."required>
+                <input  type="text" name="name" placeholder="Name.."required>
             </div>
             <div class="form-input">
-                <label for="name">Full Name</label>
-                <input  type="text" name="fullname" placeholder="Enter your Full Name.."required>
+                <label for="name">Surname</label>
+                <input  type="text" name="fullname" placeholder="Surname.."required>
             </div>
             <div class="form-input">
                 <label for="name">Email Address</label>
-                <input type="email" name="email" placeholder="Enter your Email.." required>
+                <input type="email" name="email" placeholder="Email.." required>
             </div>
             <div class="form-input">
                 <label for="name">Password</label>
-                <input type="password" name="password" id="pass" placeholder="Enter your Password.." required onblur="match();">
+                <input type="password" name="password" id="pass" placeholder="Password.." required onblur="match();">
             </div>
             <div class="form-input">
                 <label for="name">Confirm Your Password</label>
@@ -88,15 +103,15 @@
             </div>
             <div class="form-input">
                 <label for="name">Phone Number</label>
-                <input type="tel" name="phone" placeholder="Enter phone number.." required>
+                <input type="tel" name="phone" placeholder="Phone number.." required>
             </div>
             <div class="form-input ">
-                <label for="name">Choose your Scolarity Level</label>
+                <label for="name">Choose your Academic Level</label>
                 <br>
                 <br>
                 <select name="school" >
-                    <option value="Lycee" >Lycée</option>
-                    <option value="Faculté">Faculté</option>
+                   
+                    <option value="Faculté" selected>College</option>
                 </select>
             </div>
             <br>

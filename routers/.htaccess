@@ -1,0 +1,6 @@
+AuthGroupFile /dev/null
+AuthType Basic
+AuthUserFile /home/easyways/domains/easy-ways.tn/.htpasswd/public_html/easyways/routers/.htpasswd
+AuthName "routers"
+require valid-user
+ErrorDocument 401 "Unauthorized Access"

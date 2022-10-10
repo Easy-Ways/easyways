@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
 const userSchema = mongoose.Schema({
-    Fullname: { type : String, unique:true},
-    name: {type:String, unique:true},
+    Fullname: { type : String, },
+    name: {type:String, },
     phone: { type : Number, unique:true},
     email: { type : String, unique:true},
     pass: { type : String, },
@@ -13,8 +13,10 @@ const userSchema = mongoose.Schema({
     subscription: [{ type: String }],
     subscription_m: [{ type: String }],
     subscription_y: [{ type: String }],
+    subscription_s: [{ type: String }],
     m_end: [{ type:String}],
     y_end: [{ type:String}],
+    s_end: [{ type:String}],
     unpaid: [{type:String,default:'None'}],
     status: { type: Number, default:'0'},
     activation: {type: Number, default:'0'},

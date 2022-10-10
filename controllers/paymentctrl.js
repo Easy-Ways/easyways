@@ -9,8 +9,11 @@ exports.rendere = (req,res,next) =>{
     var data = url.parse(urll,true);
     var q= data.query;
     id=q.id;
+  if(!id){
+    return res.redirect('/login');}
     user.findOne({_id:id}).then((User)=>{
       if(!User){
+        res.clearCookie('id',{path: '/'});
         return res.redirect('/login');
       } 
       var string = encodeURIComponent(User._id); 

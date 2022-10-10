@@ -4,8 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title> Easy-Ways || Sign-In</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Easy-Ways Academy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="teacher.easy-ways.tn" />
+        <meta property="og:image" content="https://i.im.ge/2022/09/14/1TVei9.Easy-Ways.jpg" />
+        <meta proprety="author" content="Easy-Ways Dev">
+        <meta name="keywords" content="fac, MPI, tunisie, elearning, cours, exercices, magazines, etude, maths, physique, devoirat, devoirs, serie, easy ways, easy-ways, Easy-Ways academy, Easyways, easyways">
+        <meta name="description" content="Easy-Ways is the first academy built by student for students,affording new fonctionailties never used befor in Tunisia.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/Easy-Ways.ico">
 
@@ -24,6 +30,15 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background:  url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        }
+        </style>
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -53,7 +68,7 @@
                 <div class="form-input">
                     <h3 style="color:red;"><strong><%=message%></strong></h3>
                     <label for="name"><strong>Email</label>
-                    <input  type="email" name="email" placeholder="Enter your mail" required>
+                    <input  type="email" name="email" placeholder="Enter your email.." required>
                 </div>
                 <div class="form-input">
                     <label for="name"><strong>Password</label>
@@ -64,10 +79,10 @@
                 </div>
                 
                 <!-- Forget Password -->
-                <a href="/forgetpass" class="forget">Forget Password</a>
+                <a href="/forgetpass" class="forget">Forgot Password</a>
                 <!-- Forget Password -->
                 <a href="/register" class="registration">Registration</a>
-                <a href="/PAY" class="registration">Pay a reciepe</a>
+                <a href="/PAY" class="registration">Pay a receipt</a>
             </div>
         </form>
         <!-- /end login form -->

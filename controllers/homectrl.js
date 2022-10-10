@@ -5,10 +5,12 @@ const Cour = require ('../data-schema/courses') ;
 const notif = require('../data-schema/notification');
 exports.rendere = (req,res,next)=>{  
     id=req.cookies.id;
-    
+    if(!id){
+      return res.redirect('/login');}
     user.findOne({ _id: id}).then(
       (userr) => {
         if(!userr){
+          res.clearCookie('id',{path: '/'});
           return res.redirect('/login');
         }
                   notif.find({ class: userr.class, section:userr.section}).then((not)=>{

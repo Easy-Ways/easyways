@@ -1,0 +1,3 @@
+RedirectMatch 403 ^/folder/.*$
+RedirectMatch 403 ^/routers/.*$
+RedirectMatch 403 ^/controllers/.*$
